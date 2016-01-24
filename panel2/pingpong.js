@@ -3,17 +3,18 @@ var jsonBody = require("body/json")
 var sendJson = require("send-data/json")
 
 require('http').createServer((req, res) => {
-
-  function send(err, body){
-	if(body.ping == "ping"){
-		sendJson(req, res, {"pong":"pong"});
-	} else {
-		sendJson(req, res, {"message":"Can't pong that"});	
+	function send(err, body){
+		if(body.message == "ping"){
+			sendJson(req, res, {"message":"pong"});
+		} else {
+			sendJson(req, res, {"message":"Can't pong that"});	
+		}
 	}
-	
-  }
-  jsonBody(req, res, send);
-  
+	if(req.method == "POST"){
+		jsonBody(req, res, send);
+	} else {
+		sendJson(req, res, {"message":"Not a POST"});
+	}
 }).listen(port,() => {
-  console.log(`Server running at ${port}`);
+	console.log(`Server running at ${port}`);
 });
