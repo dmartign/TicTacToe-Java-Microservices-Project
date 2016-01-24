@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Store>
+<Order OrderID="1">
+<Items>
+  <SoldDate>08/01/2015</SoldDate>
+  <Name>Tech Track Jacket</Name>
+  <Category>Men's Wear</Category>
+  <Details>
+       <UnitPrice>30.99</UnitPrice>
+       <Size>38</Size>
+       <Color>White</Color>
+       <Pattern>T-shirt</Pattern>
+       <Brand>Ralph Lauren</Brand>
+  </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="1">Williams</manager>
+				  <manager id="10">Smith</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="2">
+<Items>
+   <SoldDate>09/01/2015</SoldDate>
+   <Name>Twix Polo</Name>
+   <Category>Men's Wear</Category>
+   <Details>
+        <UnitPrice>15.99</UnitPrice>
+        <Size>40</Size>
+        <Color>White</Color>
+        <Brand>Ralph Lauren</Brand>
+  </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="11">Alex</manager>
+				  <manager id="12">Jon</manager>
+				  <manager id="25">Greg</manager>
+              </managers>
+ </office>
+</Order>
+
+<Order OrderID="3">
+<Items>
+    <SoldDate>09/16/2015</SoldDate>
+    <Name>Barricade Bermuda</Name>
+    <Category>Men's Wear</Category>
+    <Details>
+        <UnitPrice>110.99</UnitPrice>
+        <Size>42</Size>
+        <Color>White</Color>
+        <Pattern>T-shirt</Pattern>
+        <Brand>Ralph Lauren</Brand>
+     </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="1">Williams</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="4">
+<Items>
+    <SoldDate>09/14/2015</SoldDate>
+	<Name> Tech Cape</Name>
+    <Category>Women's Wear</Category>
+    <Details>
+           <UnitPrice>20.99</UnitPrice>
+          <Color>Black</Color>
+           
+    </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="11">Alex</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="5">
+<Items>
+   <SoldDate>09/19/2015</SoldDate>
+   <Name>Shirt</Name>
+   <Category>Men's Wear</Category>
+   <Details>
+          <UnitPrice>65.99</UnitPrice>
+          <Size>45</Size>
+          <Color>Black</Color>
+          <Pattern>T-shirt</Pattern>
+          <Brand>Ralph Lauren</Brand>
+   </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="1">Williams</manager>
+				   <manager id="11">Alex</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="6">
+<Items>
+    <SoldDate>09/17/2015</SoldDate>
+    <Name>Barricade Bermuda</Name>
+    <Category>Men's Wear</Category>
+    <Details>
+        <UnitPrice>47.99</UnitPrice>
+        <Size>32</Size>
+        <Color>White</Color>
+        <Pattern>T-shirt</Pattern>
+        <Brand>Ralph Lauren</Brand>
+     </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="1">Williams</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="7">
+<Items>
+   <SoldDate>08/20/2015</SoldDate>
+   <Name>Twix Polo</Name>
+   <Category>Men's Wear</Category>
+   <Details>
+        <UnitPrice>89.99</UnitPrice>
+        <Size>12</Size>
+        <Color>White</Color>
+        <Brand>Ralph Lauren</Brand>
+  </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="11">Alex</manager>
+				  <manager id="12">Jon</manager>
+				  <manager id="25">Greg</manager>
+              </managers>
+ </office>
+</Order>
+
+<Order OrderID="8">
+<Items>
+  <SoldDate>08/14/2015</SoldDate>
+  <Name>Shirt</Name>
+  <Category>Men's Wear</Category>
+  <Details>
+         <UnitPrice>59.99</UnitPrice>
+         <Size>40</Size>
+         <Color>Red</Color>
+         <Pattern>T-shirt</Pattern>
+         <Brand>Ralph Lauren</Brand>
+  </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="1">Williams</manager>
+              </managers>
+        </office>
+</Order>
+
+<Order OrderID="2">
+<Items>
+   <SoldDate>09/01/2015</SoldDate>
+   <Name>Twix Polo</Name>
+   <Category>Men's Wear</Category>
+   <Details>
+        <UnitPrice>59.99</UnitPrice>
+        <Size>40</Size>
+        <Color>White</Color>
+        <Brand>Ralph Lauren</Brand>
+  </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                  <manager id="11">Alex</manager>
+				  <manager id="12">Jon</manager>
+				  <manager id="25">Greg</manager>
+              </managers>
+ </office>
+</Order>
+
+<Order OrderID="10">
+<Items>
+ <SoldDate>09/23/2015</SoldDate>
+ <Name>Rally Funnel Neck Hoody</Name>
+ <Category>Men's Wear</Category>
+ <Details>
+      <UnitPrice>59.99</UnitPrice>
+       <Color>White</Color>
+        
+ </Details>
+</Items>
+ <office location="Widgets, Boston MA">
+             <managers>
+                   <manager id="25">Greg</manager>
+              </managers>
+        </office>
+</Order>
+</Store>

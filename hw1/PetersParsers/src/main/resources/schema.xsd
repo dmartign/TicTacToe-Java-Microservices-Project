@@ -16,11 +16,14 @@
 										<xs:element name="Details" maxOccurs="1">
 											<xs:complexType>
 												<xs:all>
-													<xs:element name="UnitPrice" type="xs:decimal"/>
-													<xs:element name="Size" type="xs:integer"  minOccurs="0"/>
-													<xs:element name="Color" type="xs:string"/>
-													<xs:element name="Pattern" type="xs:string"  minOccurs="0"/>
-													<xs:element name="Brand" type="xs:string"  minOccurs="0"/>
+													<xs:element name="UnitPrice" type="xs:decimal" />
+													<xs:element name="Size" type="xs:integer"
+														minOccurs="0" />
+													<xs:element name="Color" type="xs:string" />
+													<xs:element name="Pattern" type="xs:string"
+														minOccurs="0" />
+													<xs:element name="Brand" type="xs:string"
+														minOccurs="0" />
 												</xs:all>
 											</xs:complexType>
 										</xs:element>
@@ -50,11 +53,10 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:all>
-									<xs:attribute name="OrderID" type="xs:string" />
+						<xs:attribute name="OrderID" type="xs:string" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-
 </xs:schema>

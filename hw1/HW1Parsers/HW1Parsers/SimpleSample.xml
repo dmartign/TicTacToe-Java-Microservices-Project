@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Store>
+<Order OrderID="1">
+<Items>
+  <SoldDate>08/01/2015</SoldDate>
+  <Name>Tech Track Jacket</Name>
+  <Category>Men's Wear</Category>
+  <Details>
+	<UnitPrice>30.99</UnitPrice>
+  </Details>
+</Items>
+<Office location="Salem">
+	<managers>
+		<manager id="1">Williams </manager>
+	</managers>
+</Office>
+</Order>
+
+<Order OrderID="2">
+<Items>
+  <SoldDate>08/01/2015</SoldDate>
+  <Name>2Tech Track Jacket</Name>
+  <Category>2Men's Wear</Category>
+  <Details>
+	<UnitPrice>230.99</UnitPrice>
+  </Details>
+</Items>
+<Office location="2Salem">
+	<managers>
+		<manager id="2">2Williams </manager>
+	</managers>
+</Office>
+</Order>
+
+
+
+</Store>
