@@ -1,0 +1,19 @@
+Pfisterer, D.; Romer, K.; Bimschas, D.; Kleine, O.; Mietz, R.; Cuong Truong; Hasemann, H.; Kro¨ller, A.; Pagel, M.; Hauswirth, M.; Karnstedt, M.; Leggieri, M.; Passant, A.; Richardson, R., "SPITFIRE: toward a semantic web of things," in Communications Magazine, IEEE , vol.49, no.11, pp.40-48, November 2011
+doi: 10.1109/MCOM.2011.6069708
+keywords: {semantic Web;sensors;Internet-connected sensors;SPITFIRE;Web page;information systems;semantic Web of things;sensors;unimodal closed systems;Communication protocols;Ontologies;Resource description framework;Semantics;Sensor phenomena and characterization;Sensors},
+URL: http://ieeexplore.ieee.org.huaryu.kl.oakland.edu/stamp/stamp.jsp?tp=&arnumber=6069708&isnumber=6069696
+
+Rivero, C.R.; Hernandez, I.; Ruiz, D.; Corchuelo, R., "Benchmarking Data Exchange among Semantic-Web Ontologies," in Knowledge and Data Engineering, IEEE Transactions on , vol.25, no.9, pp.1997-2009, Sept. 2013
+doi: 10.1109/TKDE.2012.175
+keywords: {bibliographies;electronic data interchange;ontologies (artificial intelligence);semantic Web;MostoBM;bibliography;data Web;data exchange benchmarking;data exchange system testing;evaluation methodology;real-world data exchange pattern;semantic-Web ontologies;synthetic data exchange pattern;Benchmark testing;Context;Data models;Engines;OWL;Ontologies;Resource description framework;Performance and scalability;Web of data;data exchange},
+URL: http://ieeexplore.ieee.org.huaryu.kl.oakland.edu/stamp/stamp.jsp?tp=&arnumber=6295616&isnumber=6565325
+
+Moll, V.; Wilges, B.; Bastos, R.C., "Access control and collaborative authoring on the Semantic Web.," in Latin America Transactions, IEEE (Revista IEEE America Latina) , vol.10, no.1, pp.1251-1255, Jan. 2012
+doi: 10.1109/TLA.2012.6142469
+keywords: {authorisation;groupware;message authentication;semantic Web;FOAF+SSL;OpenID;application server;collaborative authoring;collaborative creation;collaborative editing;decentralized access control;decentralized authentication;information security area;linked data;semantic Web;user management;Access control;Collaboration;Conferences;Educational institutions;Resource description framework;Access Control;Collaborative Authoring;Semantic Web},
+URL: http://ieeexplore.ieee.org.huaryu.kl.oakland.edu/stamp/stamp.jsp?tp=&arnumber=6142469&isnumber=6142447
+
+Gracia, J.; Mena, E., "Dealing with Semantic Heterogeneity Issues on the Web," in Internet Computing, IEEE , vol.PP, no.99, pp.1-1, 0
+doi: 10.1109/MIC.2011.129
+keywords: {Atmospheric measurements;Context;Ontologies;Particle measurements;Redundancy;Semantic Web;Semantics;C.2.4.c Distributed databases;Distributed heterogeneous databases;Global information systems;H.2.4.d Distributed databases;H.2.5 Heterogeneous Databases;H.2.8.a Bioinformatics (genome or protein) databases;I.2.11.b Intelligent agents;I.2.11.d Multiagent systems;I.2.12 Intelligent Web Services and Semantic Web;I.2.12.d Ontology languages &#60; I.2.12 Intelligent Web Services and Semantic Web &#60; I.2 Artificial Intelligence &#60; I Computing Metho;I.2.13.i Knowledge reuse;Web;agent technology;agents;mobile computing;multiagent systems;ontologies},
+URL: http://ieeexplore.ieee.org.huaryu.kl.oakland.edu/stamp/stamp.jsp?tp=&arnumber=6025341&isnumber=5226613
