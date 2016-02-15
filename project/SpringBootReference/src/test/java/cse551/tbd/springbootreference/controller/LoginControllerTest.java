@@ -50,4 +50,5 @@ public class LoginControllerTest {
         verify(this.service).logout(request.getToken());
         assertThat(actual, is(expected));
     }
+
 }
