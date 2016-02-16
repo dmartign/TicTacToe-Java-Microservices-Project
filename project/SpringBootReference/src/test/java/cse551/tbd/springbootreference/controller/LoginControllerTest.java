@@ -15,7 +15,6 @@ import org.springframework.http.ResponseEntity;
 
 import cse551.tbd.springbootreference.controller.dto.LoginRequest;
 import cse551.tbd.springbootreference.controller.dto.LoginResponse;
-import cse551.tbd.springbootreference.controller.dto.LogoutRequest;
 import cse551.tbd.springbootreference.controller.dto.LogoutResponse;
 import cse551.tbd.springbootreference.service.LoginService;
 
@@ -42,12 +41,12 @@ public class LoginControllerTest {
 
     @Test
     public void canLogout() throws Exception {
-        LogoutRequest request = new LogoutRequest("token");
+        String token = "token";
         ResponseEntity<LogoutResponse> expected = new ResponseEntity<LogoutResponse>(HttpStatus.OK);
 
-        ResponseEntity<?> actual = this.controller.logout(request);
+        ResponseEntity<?> actual = this.controller.logout(token);
 
-        verify(this.service).logout(request.getToken());
+        verify(this.service).logout(token);
         assertThat(actual, is(expected));
     }
 }
