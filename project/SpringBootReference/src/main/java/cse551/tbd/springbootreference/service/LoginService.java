@@ -1,5 +1,6 @@
 package cse551.tbd.springbootreference.service;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +20,7 @@ public class LoginService {
         if (user != null && user.getPassword().equals(password)) {
             user.setToken(this.tokenGenerator.generate());
             user = this.loginRepository.save(user);
+            Logger.getLogger(LoginService.class).info("Logging in " + user.getUsername());
             return user.getToken();
         } else {
             return null;
@@ -26,8 +28,12 @@ public class LoginService {
     }
 
     public void logout(String token) {
-        // TODO Auto-generated method stub
-
+        User user = this.loginRepository.findByToken(token);
+        if (user != null) {
+            Logger.getLogger(LoginService.class).info("Logging out " + user.getUsername());
+            user.setToken(null);
+            this.loginRepository.save(user);
+        }
     }
 
 }

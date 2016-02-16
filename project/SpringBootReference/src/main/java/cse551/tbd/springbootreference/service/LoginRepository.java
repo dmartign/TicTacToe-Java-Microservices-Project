@@ -9,4 +9,6 @@ public interface LoginRepository extends org.springframework.data.repository.Cru
 
     public User findByUsername(String username);
 
+    public User findByToken(String token);
+
 }

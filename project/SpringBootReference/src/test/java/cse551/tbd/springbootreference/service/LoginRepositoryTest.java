@@ -3,6 +3,7 @@ package cse551.tbd.springbootreference.service;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class LoginRepositoryTest {
     @Autowired
     LoginRepository repository;
 
+    @Before
+    public void before() {
+        this.repository.deleteAll();
+    }
+
     @Test
     public void canSaveUser() throws Exception {
         User user = User.builder().username("username").password("password").build();
@@ -26,6 +32,15 @@ public class LoginRepositoryTest {
         user = this.repository.save(user);
 
         User actual = this.repository.findByUsername("username");
+        assertThat(actual, is(user));
+    }
+
+    @Test
+    public void canFindByToken() throws Exception {
+        User user = User.builder().username("username").password("password").token("token").build();
+        user = this.repository.save(user);
+
+        User actual = this.repository.findByToken("token");
         assertThat(actual, is(user));
     }
 

@@ -69,4 +69,18 @@ public class LoginServiceTest {
 
         assertThat(actual, nullValue());
     }
+
+    @Test
+    public void canLogout() throws Exception {
+        String username = "username";
+        String password = "password";
+        String token = "token";
+        User user = User.builder().username(username).password(password).token(token).build();
+        User loggedOutUser = User.builder().username(username).password(password).build();
+        when(this.loginRepository.findByToken(token)).thenReturn(user);
+
+        this.service.logout(token);
+
+        verify(this.loginRepository).save(loggedOutUser);
+    }
 }
