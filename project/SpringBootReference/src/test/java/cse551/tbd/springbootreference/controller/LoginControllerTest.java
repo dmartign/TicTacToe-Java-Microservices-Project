@@ -3,6 +3,10 @@ package cse551.tbd.springbootreference.controller;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,6 +52,19 @@ public class LoginControllerTest {
 
         verify(this.service).logout(token);
         assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void canGetAllLoggedInUsers() throws Exception {
+        List<String> expected = new ArrayList<String>();
+        expected.add("user");
+
+        when(this.service.getLoggedInUsers()).thenReturn(expected);
+
+        ResponseEntity<List<String>> actual = this.controller.getLoggedInUsers();
+
+        assertThat(actual.getStatusCode(), is(HttpStatus.OK));
+        assertThat(actual.getBody(), is(expected));
     }
 
 }

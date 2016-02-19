@@ -1,5 +1,7 @@
 package cse551.tbd.springbootreference.service;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,6 +16,9 @@ public class LoginService {
 
     @Autowired
     TokenGenerator tokenGenerator;
+
+    @Autowired
+    UserNameExtractor userNameExtractor;
 
     public String login(String username, String password) {
         User user = this.loginRepository.findByUsername(username);
@@ -34,6 +39,11 @@ public class LoginService {
             user.setToken(null);
             this.loginRepository.save(user);
         }
+    }
+
+    public List<String> getLoggedInUsers() {
+        List<User> users = this.loginRepository.findByTokenIsNotNull();
+        return this.userNameExtractor.extract(users);
     }
 
 }

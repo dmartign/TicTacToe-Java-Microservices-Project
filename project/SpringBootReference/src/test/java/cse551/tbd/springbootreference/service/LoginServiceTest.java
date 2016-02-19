@@ -6,6 +6,9 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -25,6 +28,9 @@ public class LoginServiceTest {
 
     @Mock
     TokenGenerator tokenGenerator;
+
+    @Mock
+    UserNameExtractor userNameExtractor;
 
     @Test
     public void canLogin() throws Exception {
@@ -82,5 +88,20 @@ public class LoginServiceTest {
         this.service.logout(token);
 
         verify(this.loginRepository).save(loggedOutUser);
+    }
+
+    @Test
+    public void canGetAllLoggedInUsers() throws Exception {
+        List<User> users = new ArrayList<User>();
+        users.add(User.builder().username("username").build());
+        List<String> expected = new ArrayList<String>();
+        expected.add("username");
+
+        when(this.loginRepository.findByTokenIsNotNull()).thenReturn(users);
+        when(this.userNameExtractor.extract(users)).thenReturn(expected);
+
+        List<String> actual = this.service.getLoggedInUsers();
+
+        assertThat(actual, is(expected));
     }
 }

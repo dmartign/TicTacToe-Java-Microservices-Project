@@ -1,7 +1,10 @@
 package cse551.tbd.springbootreference.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +36,11 @@ public class LoginController {
     public ResponseEntity<LogoutResponse> logout(@PathVariable("token") String token) {
         this.loginService.logout(token);
         return new ResponseEntity<LogoutResponse>(HttpStatus.OK);
+    }
+
+    @RequestMapping(method = GET)
+    public ResponseEntity<List<String>> getLoggedInUsers() {
+        return new ResponseEntity<List<String>>(this.loginService.getLoggedInUsers(), HttpStatus.OK);
     }
 
     // should this track token to IP?
