@@ -1,0 +1,36 @@
+<HTML>
+	<HEAD>
+		<TITLE>Crappy Maps Search</TITLE>
+		<SCRIPT>
+		function callGMaps(){
+			var input = document.getElementById("input");
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					document.getElementById("content").innerHTML = xhttp.responseText;
+				}
+			};
+
+
+			var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.865025,-119.538308&radius=20&key=AIzaSyAFfOdl3gM8q3UvhJjjQUXxNlqeZO_rbQw";
+  xhttp.open("GET", url, true);
+  			xhttp.setRequestHeader("Access-Control-Request-Method","GET");
+			xhttp.setRequestHeader("Origin","http://oakland.edu");
+  xhttp.send();
+		}
+		
+		function enterCheck(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+	  callGMaps();
+      return false;
+    }
+  }
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		Coordinates: <input id="input" type="text" name="coordinates" onkeyup="enterCheck()">
+		<DIV id="content"></DIV>
+	</BODY>
+</HTML>
