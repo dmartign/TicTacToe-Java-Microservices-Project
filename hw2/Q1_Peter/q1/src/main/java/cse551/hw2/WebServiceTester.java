@@ -1,4 +1,4 @@
-package cse545.hw2;
+package cse551.hw2;
 
 import java.util.List;
 

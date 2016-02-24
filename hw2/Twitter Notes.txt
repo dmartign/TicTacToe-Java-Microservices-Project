@@ -1,0 +1,6 @@
+http://stackoverflow.com/questions/32171374/how-to-make-calls-to-twitter-api-using-postman-client
+https://twittercommunity.com/t/post-request-returned-message-could-not-authenticate-you-code-32-after-migrated-to-api-v1-1/10264/2
+Make sure you use x-www-form-urlencoded in the body tab
+Set Authorization to oauthv1 and set the first 4 fields
+Set add params to header, encoded oauth signature, auto add parameters
+Pray
