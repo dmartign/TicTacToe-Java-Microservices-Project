@@ -20,3 +20,5 @@ When trying to delete another user's post it sends back:
       ""code"": 183,
       ""message"": ""You may not delete another user's status.""
     }"
+Public,POST,https://api.twitter.com/1.1/statuses/retweet/693912311094976517.json,"Retweets the tweet whose id you supply.  Returns the original tweet with all the details (original poster, etc.) of the original tweet."
+Public,GET,https://api.twitter.com/1.1/friends/list.json?user_id=921229428,Gives you back a detailed list of all the people that the given user_id is following.
