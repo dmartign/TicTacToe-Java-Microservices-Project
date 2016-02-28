@@ -22,3 +22,12 @@ When trying to delete another user's post it sends back:
     }"
 Public,POST,https://api.twitter.com/1.1/statuses/retweet/693912311094976517.json,"Retweets the tweet whose id you supply.  Returns the original tweet with all the details (original poster, etc.) of the original tweet."
 Public,GET,https://api.twitter.com/1.1/friends/list.json?user_id=921229428,Gives you back a detailed list of all the people that the given user_id is following.
+Public,POST,https://api.twitter.com/1.1/favorites/create.json?id=702976364660572161,"Before November 2015, the like action was known as favorite, so the API name still has the historic ""favorites"" name, although the new option is ""like"". It is an asynchronous process that lets create a like on a tweet. If the process is successful (200 OK response), it returns a ""liked"" status for the status' ID given as parameter of the authenticating user. Note: if try to favorite/like a tweet twice, the request will throw an error (from Postman). {
+  ""errors"": [
+    {
+      ""code"": 139,
+      ""message"": ""You have already favorited this status.""
+    }
+  ]
+}"
+Public,GET,https://api.twitter.com/1.1/statuses/user_timeline.json,"The request returns a collection of the most recent tweets posted by the user (indicated by the screen_name or user_id parameters of the request). The timeline can only be requested if the authenticated user owns the timeline or is a follower of the user's timeline. The request can only return up to 3,200 recent user tweets in the timeline. "
