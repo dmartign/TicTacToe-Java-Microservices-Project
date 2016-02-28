@@ -30,4 +30,6 @@ Public,POST,https://api.twitter.com/1.1/favorites/create.json?id=702976364660572
     }
   ]
 }"
-Public,GET,https://api.twitter.com/1.1/statuses/user_timeline.json,"The request returns a collection of the most recent tweets posted by the user (indicated by the screen_name or user_id parameters of the request). The timeline can only be requested if the authenticated user owns the timeline or is a follower of the user's timeline. The request can only return up to 3,200 recent user tweets in the timeline. "
+Public,GET,https://api.twitter.com/1.1/statuses/user_timeline.json,"The request returns a collection of the most recent tweets posted by the user (indicated by the screen_name or user_id parameters of the request).
+The timeline can only be requested if the authenticated user owns the timeline or is a follower of the user's timeline.
+The request can only return up to 3,200 recent user tweets in the timeline. "
