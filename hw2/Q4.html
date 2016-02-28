@@ -1,19 +1,6 @@
 <HTML>
 	<HEAD>
 		<TITLE>Crappy Maps Search</TITLE>
-		<script src="https://apis.google.com/js/api.js" type="text/javascript"> </script>
-<script type="text/javascript">
-//<![CDATA[
-	
-	gapi.load('auth', function(){
-		gapi.auth.init(function(){alert("Ready");})
-		}
-	);
-	gapi.load('client',function(){
-		gapi.client.setApiKey("AIzaSyAFfOdl3gM8q3UvhJjjQUXxNlqeZO_rbQw");
-	});
-//]]>
-</script>
 		<SCRIPT>
 		function callGMaps(){
 			var input = document.getElementById("input");
@@ -23,23 +10,9 @@
 					document.getElementById("content").innerHTML = xhttp.responseText;
 				}
 			};
-			xhttp.open('GET', 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.865025,-119.538308&radius=20&key=AIzaSyAFfOdl3gM8q3UvhJjjQUXxNlqeZO_rbQw');
+			var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.865025,-119.538308&radius=20&key=APIKEY";
+			xhttp.open("GET", url, true);
 			xhttp.send();
-			/*
-			
-var xhr = new XMLHttpRequest();
-var oauthToken = gapi.auth.getToken();
-alert(gapi.auth.getToken());
-xhr.open('GET',
-  'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.865025,-119.538308&radius=20&access_token=' + encodeURIComponent(oauthToken.access_token));
-xhr.send();
-/*
-			var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=37.865025,-119.538308&radius=20&key=AIzaSyAFfOdl3gM8q3UvhJjjQUXxNlqeZO_rbQw";
-  xhttp.open("GET", url, true);
-  			xhttp.setRequestHeader("Access-Control-Request-Method","GET");
-			xhttp.setRequestHeader("Origin","http://oakland.edu");
-  xhttp.send();
-  */
 		}
 		
 		function enterCheck(e){
