@@ -7,7 +7,6 @@ import hw3q1.model.domain.dao.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,8 +29,6 @@ public class RegisterServlet extends HttpServlet {
         String zipcode = req.getParameter("zipcode");
         PrintWriter out = resp.getWriter();
         if (nullOrBlank(email) || nullOrBlank(password) || nullOrBlank(name) || nullOrBlank(streetAddress) || nullOrBlank(state) || nullOrBlank(zipcode)) {
-            RequestDispatcher dispatcher = req.getRequestDispatcher("register.html");
-            dispatcher.forward(req, resp);
             System.out.println("Missing information");
             out.write("Missing Information");
         } else {

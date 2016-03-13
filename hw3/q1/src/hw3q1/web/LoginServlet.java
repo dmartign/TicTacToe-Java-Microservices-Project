@@ -25,8 +25,7 @@ public class LoginServlet extends HttpServlet {
             User user = userDAO.findUserByEmail(email);
             if (user != null && user.getPassword().matches(password)) {
                 req.getSession().setAttribute("user", user);
-                RequestDispatcher dispatcher = req.getRequestDispatcher("home");
-                dispatcher.forward(req, resp);
+                resp.sendRedirect("home");
             } else {
                 RequestDispatcher dispatcher = req.getRequestDispatcher("login.html");
                 dispatcher.forward(req, resp);

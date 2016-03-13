@@ -8,14 +8,15 @@
 
 </head>
 <body>
-	<form method="POST" action="register">
+	<div style="color:red;" id="message"></div>
+	<form>
 		Email: <input type="text" name="email"><br />
 		Password: <input type="password" name="password"><br />
 		Name: <input type="text" name="name"><br />
 		Street address: <input type="text" name="streetaddress"><br />
 		State: <input type="text" name="state"><br />
 		Zip Code: <input type="text" name="zipcode"><br />
-		<input type="submit" value="Register">
+		<button type="button" onclick="registerUser()">Submit</button>
 	</form>
 </body>
 </html>
