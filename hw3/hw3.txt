@@ -1,0 +1,35 @@
+Home Assignment 3
+There are two questions . Question 1 contains 80 points while Q2 contains 20 points.
+
+
+
+Question 1
+
+
+
+Develop servlet and JSP based web app that shows the activities of your group's research and projects of your graduate studies( not limited to CSE551)
+Provide user option to register and then login to the application.
+The users information should be maintained in database.
+Use standard logging framework log4j.
+The application should support session management, no JSPs should be visible without session. Users can logout anytime from the application.
+your web app should not show application and server details to user incase of any exception in application or other common errors like 404.
+Use MVC architecture.
+
+Detailed steps to meet above mentioned requirements ( you must follow all these steps, step 4 is optional and offers extra credit-20 points):
+To make login page as the entry point of application, make a simple login.html where user can enter their credentials; email and password. Perform server side validation and incase of missing information  redirect user to login page with error details ( see hands-on practice 2).
+Make register.html from where user can register to application, and provide it’s link in the login page for new user. User should provide email, password, name, Street address, State, Zip code for registration. If any information is missing, user will remain on same page with error message. If registration is successful, user will be forwarded to the login page with registration success information and they can use email and password to login.
+Design MySql database for persisting user information. Create a new database, user and Users table for your application. Since your application totally depends on Database Connection,  create a servlet context listener to initialize the database connection and set it as context attribute for other servlets. Keep DB configuration details configurable through deployment descriptor. Add MySql Java Connector jar to the application libraries.
+[for Extra credit ]use log4j and configure it properly before usage, utilize servlet context listener to configure log4j and keep the log4j configuration XML file location in web.xml init parameters. Write your application logs in a separate log file dbexample.log for easier debugging.
+Incase of any exceptions like “Database Connection Error” or 404 errors, present a useful page to user. utilize servlet exception handling and write your own Exception Handler servlet and configure it in deployment descriptor.
+Once the user logins successfully, create a session for the user and forward them to home.jsp to show basic information of the user. Make a model class 'User' to  store the user data into session. User home page also provide logout button that will invalidate the session and forward them to login page. Also user home page has link to your projects info (available in file projects.jsp)
+once user is navigated to projects link show the abstract of your research projects from projects.jsp 
+Make sure all the JSPs and other resources are accessible only when user has a valid session, rather than keeping session validation login in all the resources, create a Servlet Filter for session validation and configure it in deployment descriptor.
+Question 2 {File to be uploaded}:
+
+Explain how Session is used in the given code. What is output of following program when it is run from (Don't forget to click the hyperlink "here"in final output window)
+
+a)Two tabs of Firefox. 
+
+b)one tab of firefox and one tab of Internet Explorer.
+
+ Explain the output and reasons if the output of both steps are different 
