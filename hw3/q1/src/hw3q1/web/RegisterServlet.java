@@ -12,9 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class RegisterServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+
+    private static final Logger LOGGER = LogManager.getLogger(RegisterServlet.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
             user.setZipcode(zipcode);
 
             userDAO.register(user);
-            System.out.println("Registered User: " + user);
+            RegisterServlet.LOGGER.info("Registered User: " + user);
             out.write("Success");
         }
     }
