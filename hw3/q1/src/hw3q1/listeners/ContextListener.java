@@ -1,11 +1,8 @@
 package hw3q1.listeners;
 
-import sun.rmi.transport.Connection;
 
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -14,7 +11,9 @@ import javax.servlet.ServletContextListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import hw3q1.model.domain.dao.CrappyUserDAO;
 import hw3q1.model.domain.dao.DBUserDAO;
+import hw3q1.model.domain.dao.ProjectDAO;
 
 public class ContextListener implements ServletContextListener {
 
@@ -29,18 +28,14 @@ public class ContextListener implements ServletContextListener {
 			conn = null;
 		} catch(SQLException ex) {
 			// handle any errors
-		    System.out.println("SQLException: " + ex.getMessage());
-		    System.out.println("SQLState: " + ex.getSQLState());
-		    System.out.println("VendorError: " + ex.getErrorCode());
+			LOGGER.error("SQLException: " + ex.getMessage());
+			LOGGER.error("SQLState: " + ex.getSQLState());
+			LOGGER.error("VendorError: " + ex.getErrorCode());
 		}
     }
 
     @Override
     public void contextInitialized(ServletContextEvent context) {
-// OLD CODE
-    	//context.getServletContext().setAttribute("userdao", new CrappyUserDAO());
-        //LOGGER.info("Context Intialized");
-    	
     	// Setup DB connection
 		// connecting to mysql database, schema webuser
 		try { Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -59,10 +54,15 @@ public class ContextListener implements ServletContextListener {
 		System.out.println("Set connection attibute");
 		} catch (SQLException ex) {
 		    // handle any errors
-		    System.out.println("SQLException: " + ex.getMessage());
-		    System.out.println("SQLState: " + ex.getSQLState());
-		    System.out.println("VendorError: " + ex.getErrorCode());
+		    LOGGER.error("SQLException: " + ex.getMessage());
+		    LOGGER.error("SQLState: " + ex.getSQLState());
+		    LOGGER.error("VendorError: " + ex.getErrorCode());
 		}
+        // Setup DB connection
+        // Create userDAO w/ DB connection
+        // Save DB enabled user dao
+        context.getServletContext().setAttribute("userdao", new CrappyUserDAO());
+        context.getServletContext().setAttribute("projectdao", new ProjectDAO());
+        LOGGER.info("Context Intialized");
     }
-
 }

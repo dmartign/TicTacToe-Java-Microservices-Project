@@ -23,5 +23,9 @@
 	<%
 	    out.write("Your session id is: " + request.getSession().getId());
 	%>
+	<br/>
+	<a href = "seeProjects.do" >See Projects</a>
 </body>
+	
+
 </html>
