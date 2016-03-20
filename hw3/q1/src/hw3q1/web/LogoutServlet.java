@@ -2,7 +2,6 @@ package hw3q1.web;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +13,7 @@ public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getSession().invalidate();
-        RequestDispatcher dispatcher = req.getRequestDispatcher("login.html");
-        dispatcher.forward(req, resp);
+        resp.sendRedirect("login.html");
     }
 
 }
