@@ -53,4 +53,7 @@
 	<listener>
 		<listener-class>hw3q1.listeners.ContextListener</listener-class>
 	</listener>
+	<welcome-file-list>
+        <welcome-file>login.html</welcome-file>
+    </welcome-file-list>
 </web-app>
