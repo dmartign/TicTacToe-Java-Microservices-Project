@@ -36,7 +36,12 @@ public class RegisterServlet extends HttpServlet {
         if (nullOrBlank(email) || nullOrBlank(password) || nullOrBlank(name) || nullOrBlank(streetAddress) || nullOrBlank(state) || nullOrBlank(zipcode)) {
             System.out.println("Missing information");
             out.write("Missing Information");
-        } else {
+        }
+        else if (userDAO.findUserByEmail(email) != null) {
+        	LOGGER.info("User already exists!");
+        	out.write("User already exists!");
+        }
+        else {
             user.setEmail(email);
             user.setPassword(password);
             user.setName(name);
