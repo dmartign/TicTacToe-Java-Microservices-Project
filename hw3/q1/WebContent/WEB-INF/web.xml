@@ -4,6 +4,14 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 	<display-name>hw3q1</display-name>
+	<context-param>
+		<param-name>dbusername</param-name>
+		<param-value>peter</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbpassword</param-name>
+		<param-value>asdfasdf</param-value>
+	</context-param>
 	<servlet>
 		<servlet-name>home</servlet-name>
 		<servlet-class>hw3q1.web.HomeServlet</servlet-class>
@@ -60,6 +68,6 @@
 		<listener-class>hw3q1.listeners.ContextListener</listener-class>
 	</listener>
 	<welcome-file-list>
-        <welcome-file>login.html</welcome-file>
-    </welcome-file-list>
+		<welcome-file>login.html</welcome-file>
+	</welcome-file-list>
 </web-app>
