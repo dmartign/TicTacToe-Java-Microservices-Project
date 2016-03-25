@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
        <%@ page import="hw3q1.model.domain.*"%>
+       <%@page import="hw3q1.TypeConverter"%>
     <%@page import="java.util.*" %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -14,7 +15,7 @@
 		<input type="submit" value="Logout">
 	</form>
 	<% 
-		List<Project> projList = (List<Project>) request.getAttribute("projList");
+		List<Project> projList = TypeConverter.<List<Project>>convert(request.getAttribute("projList"));
 	    
 	for(Project project : projList){%>
 		Student: 

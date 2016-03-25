@@ -3,7 +3,7 @@
   <Properties>
     <Property name="pattern">%d %level{length=5} [%t] %C{2} (%F:%L) - %m%n</Property>
   </Properties> 
-  <Appenders> 
+  <Appenders>
     <File name="file" fileName="C:/temp/hw3q1.log" append="true"> 
       <PatternLayout pattern="${pattern}"/> 
     </File> 
@@ -14,7 +14,7 @@
   <Loggers> 
     <Root level="ALL"> 
       <AppenderRef ref="STDOUT"/>
-      <AppenderRef ref="file"/> 
+      <AppenderRef ref="file"/>
     </Root> 
   </Loggers> 
 </Configuration>

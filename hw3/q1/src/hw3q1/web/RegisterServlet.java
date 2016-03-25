@@ -34,14 +34,12 @@ public class RegisterServlet extends HttpServlet {
         String zipcode = req.getParameter("zipcode");
         PrintWriter out = resp.getWriter();
         if (nullOrBlank(email) || nullOrBlank(password) || nullOrBlank(name) || nullOrBlank(streetAddress) || nullOrBlank(state) || nullOrBlank(zipcode)) {
-            System.out.println("Missing information");
+            LOGGER.info("Missing information");
             out.write("Missing Information");
-        }
-        else if (userDAO.findUserByEmail(email) != null) {
-        	LOGGER.info("User already exists!");
-        	out.write("User already exists!");
-        }
-        else {
+        } else if (userDAO.findUserByEmail(email) != null) {
+            LOGGER.info("User already exists!");
+            out.write("User already exists!");
+        } else {
             user.setEmail(email);
             user.setPassword(password);
             user.setName(name);

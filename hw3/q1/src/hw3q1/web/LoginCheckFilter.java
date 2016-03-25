@@ -18,17 +18,15 @@ public class LoginCheckFilter implements Filter {
 
     private static final Logger LOGGER = LogManager.getLogger(LoginCheckFilter.class);
 
-    // Based on this stack overflow post
-    // http://stackoverflow.com/questions/15961940/how-jsp-page-should-check-authentication
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain fc) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) req;
         HttpServletResponse httpServletResponse = (HttpServletResponse) resp;
         if (httpServletRequest.getSession().getAttribute("user") == null) {
-            LOGGER.info("Not logged in");
+            LOGGER.info(String.format("Not logged in: %s", httpServletRequest.getRequestURI()));
             httpServletResponse.sendRedirect("login.html");
         } else {
-            LOGGER.info("Logged in");
+            LOGGER.info(String.format("Logged in: %s", httpServletRequest.getRequestURI()));
             // Boilerplate to keep processing filters
             fc.doFilter(req, resp);
         }

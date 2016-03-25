@@ -1,0 +1,9 @@
+HW3Q2
+The session in this application is used to store the selected items of the user even between multiple requests. This is similar to a online shopping cart experience in which the user can add items to the cart and then go find additional items to add to the cart.
+
+With two tabs of Chrome with cookies enabled
+	The session was shared between both tabs. Having tab 1 select the first book and tab two select the second book ended up with both tabs having both books selected
+With two tabs of Chrome with cookies disabled
+	The session was not shared between tabs, each tab could make selections independently of the other. Session was lost if manual URL entering occurred that modified or removed the Session ID.
+One tab Chrome one tab Microsoft Edge
+	The session regardless of cookie state was not shared between browsers. Each one could work independently.
