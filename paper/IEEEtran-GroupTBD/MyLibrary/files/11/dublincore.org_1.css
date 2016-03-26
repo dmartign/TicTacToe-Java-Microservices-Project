@@ -1,0 +1,19 @@
+
+/* ::::: https://joinup.ec.europa.eu/svn/joinup-widget/trunk/css/widget.css ::::: */
+
+html, body { margin: 0px; padding: 0px; overflow: hidden; }
+body { padding: 3px; font-family: Verdana,"Verdana Ref","Lucida Grande","Lucida Sans Unicode","Lucida Sans","DejaVu Sans","Bitstream Vera Sans","Liberation Sans",Corbel,Arial,sans-serif ! important; }
+a img { border: medium none; }
+.joinup-widget { width: 100%; background: rgb(0, 75, 158) none repeat scroll 0% 0%; border: 1px solid rgb(0, 75, 158); border-radius: 5px; padding: 5px 0px; }
+.joinup-widget .joinup-header, .joinup-widget .joinup-wrapper { padding-bottom: 5px; }
+.joinup-widget .joinup-header { color: white; text-align: center; }
+.joinup-widget .joinup-wrapper { background: white none repeat scroll 0% 0%; height: 100%; }
+.joinup-widget .joinup-search { padding: 10px 0px 5px; text-align: center; }
+.joinup-widget .joinup-query { border: 1px solid rgb(174, 174, 174); width: 90%; }
+.joinup-widget .joinup-submit { border: medium none; background: rgb(174, 174, 174) none repeat scroll 0% 0%; color: white; padding: 2px 10px; margin-top: 10px; }
+.joinup-widget .joinup-footer { padding: 10px 10px 0px; }
+.joinup-widget .joinup-footer img { display: block; margin-left: auto; }
+
+/* ::::: https://joinup.ec.europa.eu/svn/joinup-widget/trunk/css/widget-orange.css ::::: */
+
+.joinup-widget { background: rgb(216, 98, 50) none repeat scroll 0% 0%; border-color: rgb(216, 98, 50); }

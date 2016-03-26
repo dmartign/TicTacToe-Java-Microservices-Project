@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{_social_2007}
+{\em Social {Networks} and the {Semantic} {Web}}, vol.~5 of {\em Semantic {Web}
+  and {Beyond}}.
+\newblock Boston, MA: Springer US, 2007.
+
+\bibitem{foaf}
+``{FOAF} {Vocabulary} {Specification}.''
+  \url{http://xmlns.com/foaf/spec/20140114.html}[Accessed 2016-03-26].
+
+\bibitem{gracia_dealing_2011}
+J.~Gracia and E.~Mena, ``Dealing with {Semantic} {Heterogeneity} {Issues} on
+  the {Web},'' {\em IEEE Internet Computing}, 2011.
+
+\bibitem{6190504}
+M.~Jamalzadeh and N.~Behravan, ``Using semantic web ontologies for better
+  inter-operability on social network sites,'' in {\em Control System,
+  Computing and Engineering (ICCSCE), 2011 IEEE International Conference on},
+  pp.~103--108, Nov 2011.
+
+\bibitem{skos}
+``{SKOS} {Simple} {Knowledge} {Organization} {System} {Reference}.''
+  \url{https://www.w3.org/TR/2009/REC-skos-reference-20090818/}[Accessed
+  2016-03-26].
+
+\bibitem{sioc}
+``{SIOC} {Core} {Ontology} {Specification}.''
+  \url{https://www.w3.org/Submission/sioc-spec/}[Accessed 2016-03-26].
+
+\bibitem{dcmi}
+``{DCMI} {Home}: {Dublin} {Core}� {Metadata} {Initiative} ({DCMI}).''
+  \url{http://dublincore.org/}[Accessed 2016-03-26].
+
+\end{thebibliography}

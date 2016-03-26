@@ -1,0 +1,106 @@
+
+/* ::::: http://dublincore.org/css/default.css ::::: */
+
+body, body div, body p, body th, body td, body li, body dd { font-size: small; }
+html > body, html > body div, html > body p, html > body th, html > body td, html > body li, html > body dd { font-size: small; }
+body { background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0); font-family: Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; margin: 10px; padding: 10px; text-align: left; }
+a:link { color: rgb(0, 0, 0); text-decoration: underline; }
+a:visited { color: rgb(102, 102, 102); text-decoration: underline; }
+a:hover, a:visited:hover, a:active { color: rgb(255, 102, 0); text-decoration: underline; }
+div.homelink a#home:hover, a#home:visited:hover, a#home:active { color: rgb(255, 102, 0); }
+div.header { font-weight: bolder; font-size: 90%; padding: 2.5px 0px; }
+div.header a:link { color: rgb(0, 0, 0); text-decoration: none; }
+div.header a:visited { color: rgb(0, 0, 0); text-decoration: none; }
+div.header a:hover, a:visited:hover, a:active { color: rgb(255, 102, 0); text-decoration: underline; }
+body.home-landing a#dcmi-logo-title-r { cursor: default; }
+body.home-landing a#home { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.metadata-basics-landing a#metadata-basics { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.specifications-landing a#specifications { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.community-and-events-landing a#community-and-events { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.about-us-landing a#about-us { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.support-landing a#support { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.contact-us a#contact-us { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+body.quick-links-and-site-map a#quick-links-and-site-map { color: rgb(255, 102, 0); text-decoration: none; font-weight: bolder; cursor: default; }
+code, pre, tt { color: rgb(0, 0, 0); font-family: Courier,"Courier New","Andale Mono",Monoco,monospace; }
+hr { color: rgb(204, 204, 204); height: 1px; }
+img { border: 0px none; }
+th, td { vertical-align: top; }
+form { margin: 0px; padding: 0px; }
+input.text { font-size: 80%; }
+input.search { font: 11px Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+input.button { font: 11px Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; margin: 0px; padding: 0px; }
+h1 { color: rgb(255, 102, 0); font: bold 130% Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+h2 { color: rgb(0, 0, 0); font: bold 125% Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+h3 { color: rgb(0, 0, 0); font: bold 115% Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+h4 { color: rgb(102, 102, 102); font: italic bold 100% Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+h5 { color: rgb(119, 119, 119); font: bold 80% Tahoma,Geneva,"Arial Unicode MS",Arial,Helvetica,sans-serif; }
+h6 { color: rgb(0, 0, 0); font: 100% Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+code.example, pre.example { background: rgb(238, 238, 238) none repeat scroll 0% 0%; line-height: 140%; }
+div.deck { color: rgb(102, 102, 102); font-size: 80%; padding-bottom: 1em; }
+div.newsarchive { border-bottom: 1px solid rgb(204, 204, 204); font-size: 80%; padding: 1em 0px; text-align: center; }
+div.dates { font-size: 80%; padding: 1em 0px; text-align: center; }
+table.docinfo { background: rgb(255, 255, 204) none repeat scroll 0% 0%; width: 100%; margin-bottom: 10px; }
+table.docinfo th { text-align: right; padding: 4px; width: 15%; }
+table.docinfo td { text-align: left; padding: 4px; width: 85%; }
+table.wginfo { background: rgb(238, 238, 238) none repeat scroll 0% 0%; width: 100%; margin-bottom: 10px; }
+table.wginfo th { text-align: right; padding: 4px; width: 15%; }
+table.wginfo td { text-align: left; padding: 4px; width: 85%; }
+table.border { border-top: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); margin-bottom: 10px; }
+table.border th { background: rgb(238, 238, 238) none repeat scroll 0% 0%; font-family: Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+table.border td, table.border th { border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); padding: 0.5em; }
+table.noborder { margin-bottom: 10px; }
+table.noborder th { background: rgb(238, 238, 238) none repeat scroll 0% 0%; font-family: Verdana,Arial,"Arial Unicode MS",Helvetica,sans-serif; }
+table.noborder td, table.noborder th { padding: 0.5em; }
+div.sensemakingtoolbox { padding: 0em; }
+div.footer-link { font-weight: bolder; font-size: 90%; padding: 5px 0px; }
+div.footer-link a:link { color: rgb(0, 0, 0); text-decoration: none; }
+div.footer-link a:visited { color: rgb(0, 0, 0); text-decoration: none; }
+div.footer-link a:hover, a:visited:hover, a:active { color: rgb(255, 102, 0); text-decoration: underline; }
+div.footer { clear: both; margin-top: 1em; }
+div.footer p { font-size: 80%; }
+div.footerhome ul#unordered li { display: inline; padding: 4px 2px 0px; line-height: 24px; }
+div.footerhome { border-style: ridge; border-width: 3px; border-color: rgb(0, 0, 0); padding: 10px; }
+.skipnav { text-align: left; }
+.skipnav a { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.skipnav a:focus, .skipnav a:active { position: static; left: 0px; width: auto; height: auto; overflow: visible; text-decoration: underline; }
+#leftColumnTitle { padding-right: 2px; float: left; width: 230px; margin-left: 5px; color: rgb(0, 0, 0); border-right: 1px solid rgb(153, 153, 153); }
+#leftColumnBody { font-size: 200%; float: left; line-height: 1.4; padding-right: 5px; color: rgb(0, 0, 0); }
+#columnRight { margin: 0px 2em 0px 265px; }
+.bullteLarge { color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-size: 125%; font-weight: bold; }
+ul.noIndent { margin-left: 0.5em; padding-left: 0.5em; margin-bottom: 0em; padding-bottom: 0em; }
+ul.annotation, ul.annotation li { list-style-type: none; padding-top: 0em; margin-top: 0em; margin-left: 0em; padding-left: 0.5em; }
+div.dcmiprint { display: none; }
+.hidden { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+div.rss-item { border-bottom: 1px solid rgb(204, 204, 204); padding-bottom: 1em; padding-top: 1em; }
+div.rss-type { color: rgb(255, 51, 0); font-size: 80%; font-weight: bold; }
+div.rss-title { font-weight: bold; margin: 0px; padding: 0px; }
+div.rss-description p { margin: 0px; padding: 4px 0px 6px; }
+.refineSearch { font: 11px/13px Arial,Helvetica,sans-serif; }
+.resultMatches { font: bold 12px Arial,Helvetica,sans-serif; }
+#tableObsolete { width: 100%; border-style: solid; border-width: 1px; border-color: rgb(255, 255, 102); }
+#tableObsolete td.colNote { padding: 5px; vertical-align: top; background: rgb(255, 255, 204) none repeat scroll 0% 0%; }
+.registry { color: rgb(255, 255, 255); font-size: 80%; }
+a.registry { font-size: 80%; font-weight: bold; }
+a.registry:link { color: rgb(85, 160, 255); text-decoration: none; }
+a.registry:visited { color: rgb(255, 255, 255); text-decoration: none; }
+a.registry:hover, a.registry:visited:hover, a.registry:active { color: rgb(255, 255, 255); text-decoration: underline; }
+#header { background-color: rgb(255, 255, 255); }
+#quickLinks { padding-left: 25px; }
+.cat { float: left; font-weight: bold; }
+#trademark { font-size: 12px; }
+@media print {
+  body { background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin: 0px; padding: 0px; }
+  div.header { display: none; }
+  div.headerhome { display: none; }
+  div.dcmiprint { display: block; padding: 0px 0px 10px; }
+  table.home td.sidebar { display: none; }
+  table.home td.main { padding: 0px; width: 100%; }
+  table.menuhome { display: none; }
+  div.newsarchive { display: none; }
+  div.footer { display: none; font-size: 80%; }
+  a:link::after, a:visited::after { content: " [" attr(href) "] "; }
+}
+
+/* ::::: null ::::: */
+
+img.centered { display: block; margin-left: auto; margin-right: auto; }

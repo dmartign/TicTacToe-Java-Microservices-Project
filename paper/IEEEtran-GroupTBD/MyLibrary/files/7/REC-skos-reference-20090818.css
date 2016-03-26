@@ -1,0 +1,73 @@
+
+/* ::::: https://www.w3.org/TR/2009/REC-skos-reference-20090818/extras.css ::::: */
+
+table.vocab { border: 2px solid rgb(204, 204, 204); margin-bottom: 1em; width: 100%; }
+table.vocab td, table.vocab th { border-bottom: 2px solid rgb(204, 204, 204); margin: 0px; vertical-align: top; border-right: 2px solid rgb(204, 204, 204); padding: 0.5em; }
+table.semantics { width: 100%; border: 2px solid rgb(204, 204, 204); margin-bottom: 1em; padding: 0px; }
+table.semantics td, table.semantics th { border-bottom: 2px solid rgb(204, 204, 204); margin: 0px; vertical-align: top; }
+table.semantics td { border-right: 2px solid rgb(204, 204, 204); padding: 0.5em; background-color: rgb(255, 255, 187); }
+table.example-good, table.example-bad { width: 100%; border: 2px solid rgb(204, 204, 204); margin-bottom: 0.2em; margin-top: 0.2em; padding: 0px; }
+table.example-good p, table.example-bad p { margin: 0px; padding: 0.5em; background-color: white; }
+table.example-good div, table.example-bad div { margin: 0px; padding: 0.5em; font-family: monospace; }
+table.example-good td, table.example-good th, table.example-bad td, table.example-bad th, table.vocab th { border-bottom: 2px solid rgb(204, 204, 204); margin: 0px; padding: 0px; vertical-align: top; }
+table.example-good td, table.example-bad td { border-right: 2px solid rgb(204, 204, 204); }
+table.example-good td, table.example-bad td { margin: 0px; padding: 0em; }
+table.example-good pre, table.example-bad pre { margin: 0px; padding: 0px; }
+table.example-good td { background-color: rgb(187, 221, 255); }
+table.example-bad td { background-color: rgb(255, 170, 170); }
+table.quick-reference { width: 100%; border-top: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); margin-bottom: 10px; }
+table.quick-reference th { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+table.quick-reference td, table.quick-reference th { border-right: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); padding: 0.5em; vertical-align: top; }
+col.quick-ref-key { width: 20%; }
+col.quick-ref-value { width: 80%; }
+#div-quick-access { position: fixed; top: 0px; right: 0px; width: 15%; max-height: 95%; background: rgb(238, 238, 238) none repeat scroll 0% 0%; overflow: auto; border-left: 1px solid rgb(204, 204, 204); border-bottom: 1px solid rgb(204, 204, 204); padding: 0.5em; font-size: 0.7em; }
+#div-quick-access p { margin: 0px 0px 0.5em; padding: 0px; }
+#div-quick-access ul { margin: 0px 0px 1em; padding: 0px; }
+#div-quick-access li { list-style: outside none none; margin: 0px; padding: 0px; }
+.skinny { width: 80%; }
+.invisible { display: none; }
+a.vocab-link { font-family: monospace; }
+.editorial { border: 1px solid black; background-color: rgb(238, 170, 170); padding: 5px; }
+a.action { color: rgb(0, 0, 204); background: transparent none repeat scroll 0% 0%; text-decoration: underline; cursor: pointer; }
+.reference-title { text-decoration: underline; font-style: italic; }
+
+/* ::::: http://www.w3.org/StyleSheets/TR/W3C-REC ::::: */
+
+body { padding: 2em 1em 2em 70px; margin: 0px; font-family: sans-serif; color: black; background: white none no-repeat fixed left top; }
+:link { color: rgb(0, 0, 204); background: transparent none repeat scroll 0% 0%; }
+:visited { color: rgb(102, 0, 153); background: transparent none repeat scroll 0% 0%; }
+a:active { color: rgb(204, 0, 0); background: transparent none repeat scroll 0% 0%; }
+a:link img, a:visited img { border-style: none; }
+a img { color: white; }
+@media all {
+  a img { color: inherit; }
+}
+th, td { font-family: sans-serif; }
+h1, h2, h3, h4, h5, h6 { text-align: left; }
+h1, h2, h3 { color: rgb(0, 90, 156); background: white none repeat scroll 0% 0%; }
+h1 { font: 170% sans-serif; }
+h2 { font: 140% sans-serif; }
+h3 { font: 120% sans-serif; }
+h4 { font: bold 100% sans-serif; }
+h5 { font: italic 100% sans-serif; }
+h6 { font: small-caps 100% sans-serif; }
+.hide { display: none; }
+div.head { margin-bottom: 1em; }
+div.head h1 { margin-top: 2em; clear: both; }
+div.head table { margin-left: 2em; margin-top: 2em; }
+p.copyright { font-size: small; }
+p.copyright small { font-size: small; }
+@media screen {
+  a[href]:hover { background: rgb(255, 255, 170) none repeat scroll 0% 0%; }
+}
+pre { margin-left: 2em; }
+dt, dd { margin-top: 0px; margin-bottom: 0px; }
+dt { font-weight: bold; }
+ul.toc, ol.toc { list-style: outside none none; }
+@media speech {
+  h1, h2, h3 {  }
+  .hide {  }
+  p.copyright {  }
+  dt {  }
+}
+body { background-image: url('logo-REC'); }
