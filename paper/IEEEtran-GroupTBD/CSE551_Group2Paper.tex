@@ -42,7 +42,7 @@
 
 \begin{document}
 
-\title{Our big fancy drawn-out loooooong title\\ 2nd drawn out line of our title}
+\title{Semantic Web Ontologies Pertaining to\\ Heterogeneity and Social Networks}
 
 \author{Daniela~Martignani, %~\IEEEmembership{Member,~IEEE,}
         Peter~Miele,%~\IEEEmembership{Fellow,~OSA,}
@@ -50,15 +50,15 @@
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem Authors are graduate students in the Department
 of Computer Science and Engineering, Oakland University, Rochester,
 MI, 48309.\protect\\
-\IEEEcompsocthanksitem dmartignani@oakland.edu,pamiele@oakland.edu,jlshaska@oakland.edu}% <-this % stops an unwanted space
+\IEEEcompsocthanksitem dmartign@oakland.edu,pamiele@oakland.edu,jlshaska@oakland.edu}% <-this % stops an unwanted space
 \thanks{Manuscript submitted April 7, 2016}}
 
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Computer Society Journals}
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Computer Society Journals}
 
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-In this paper we will summarize three current, 2010+, research papers on how ontologies can be used to navigate and combine social networks to facilitate decisions on which meaning or instance of a concept a user wants to see. A common problem amongst this domain is linking concepts between ontologies if those ontologies use different semantics for the same concept or the same semantics for different concepts, techniques are evolving to solve this problem. We will also cover a summary of various ontology description languages and how they interact in semantic web for various uses. These techniques and ontology languages can be used when querying social networks to find relations to narrow the search down to those that are relevant to the current user. 
+In this paper we will summarize three current  research papers on how ontologies can be used to navigate and combine social networks to facilitate decisions on which meaning or instance of a concept a user wants to see. A common problem amongst this domain is linking concepts between ontologies if those ontologies use different semantics for the same concept or the same semantics for different concepts, techniques are evolving to solve this problem. We will also cover a summary of various ontology description languages and how they interact in semantic web for various uses. These techniques and ontology languages can be used when querying social networks to find relations to narrow the search down to those that are relevant to the current user. 
 \end{abstract}
 
 
@@ -85,7 +85,7 @@ Section one will cover the data format of the semantic web and why it is structu
 
 Section two covers the notions of the issues of independent actors all trying to author and use the semantic web at once with no over-arching governing body. This will go over the problem of multiple resources having the same identifier, called semantic ambiguity. We will also cover the issue of multiple authors all authoring the same resource which means query processor has to find the correct one which is semantic redundancy. Their findings indicate that you can, at better than chance rate, determine the correct resource to use when performing a search using an ambiguous term and relate that term across different ontologies.
 
-Section three will review a paper that applies some of these concepts in the realm of social media and connecting users across social networks. This paper addresses the issue of social networks not being able to interconnect amongst the web of all social networks. This is due to the ever changing landscape of social media content and the lack of a framework that successfully integrates the different ontologies to relate all the users and content. They presented an overview of existing ontologies, such as friend of a friend (FOAF), semantically interlinked online communities (SIOC), simple knowledge organization system (SKOS), and Dublin Core (DC) and how these ontologies can be used together to build a framework and address the issue of creating a more interconnected web. A brief discussion is included of how this framework will help describe user generated content on social networks and how it relates to users.
+Section three will review a paper that applies some of these concepts in the realm of social media and connecting users across social networks. This paper addresses the issue of social networks not being able to interconnect amongst the web of all social networks. This is due to the ever changing landscape of social media content and the lack of a framework that successfully integrates the different ontologies to relate all the users and content. They presented an overview of existing ontologies, such as Friend-of-a-Friend (FOAF), Semantically Interlinked Online Communities (SIOC), Simple Knowledge Organization System (SKOS), and Dublin Core (DC) and how these ontologies can be used together to build a framework and address the issue of creating a more interconnected web. A brief discussion is included of how this framework will help describe user generated content on social networks and how it relates to users.
 
 Once the semantic web grows and matures users will be able to be linked and identified across social networks based on the ontologies presented by each social network. This will allow the interconnection of users across social networks and allow for a better understanding of how people communicate and relate using social networks.
 
@@ -115,18 +115,18 @@ RDF and OWL have been standardized by the World Wide Web Consortium in recent ye
 
 
 \subsubsection{RDF}
-RDF has two kinds of primitives: resources and literals.  Resources are purposely defined vaguely; anything that could be identified and described can be a resource.  Resources can be identified with a URI, or the identifier can be left blank.  Literals are strings, which may or may not have language and datatype identifiers.
+RDF has two kinds of primitives: resources and literals.  Resources are purposely defined vaguely; anything that could be identified and described can be a resource.  Resources can be identified with a URI, or the identifier can be left blank.  Literals are strings, which may or may not have language and datatype identifiers.  Figure 1 shows some RDF vocabulary.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=2in]{RDFVocabPic.jpg} 
-\caption*{Figure 1: The RDF Voabulary, from \cite{_social_2007}.}
+\caption*{Figure 1: The RDF Vocabulary, from \cite{_social_2007}.}
    \label{}
 \label{}   
 \end{figure}
 
 
-RDF statements consist of triples of the form (subject, predicate, object).  The subject is a resource, either with a URI identifier or a blank identifier.  The predicate is a URI, and the object is either a resource or a literal.  Here is an example very similar to one in \cite{_social_2007} of an RDF document describing a person named Washington: 
+RDF statements consist of triples of the form (subject, predicate, object).  The subject is a resource, either with a URI identifier or a blank identifier.  The predicate is a URI, and the object is either a resource or a literal. Figures 2 and 3 show an example very similar to one in \cite{_social_2007} of an RDF document describing a person named Washington: 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -152,7 +152,7 @@ RDF statements consist of triples of the form (subject, predicate, object).  The
 \end{itemize}
 
 
-This example refers to the Friend-of-a-Friend (foaf) ontology, which is an RDF document on the Web which defines some of the terms used in the example (see\cite{foaf}).
+This example refers to the Friend-of-a-Friend (FOAF) ontology, which is an RDF document on the Web which defines some of the terms used in the example (see\cite{foaf}).  Figure 4 shows some of the FOAF vocabulary.
 
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
@@ -165,7 +165,7 @@ This example refers to the Friend-of-a-Friend (foaf) ontology, which is an RDF d
 
 
 
-RDF Schema (RDFS) extends RDF, by including the notion of classes and subclasses.  Domains and ranges of properties are used to connect classes and properties.  Many times RDF and RDFS are referred to interchangeably.
+RDF Schema (RDFs) extends RDF, by including the notion of classes and subclasses.  Domains and ranges of properties are used to connect classes and properties.  Many times RDF and RDFs are referred to interchangeably.  Some RDFs vocabulary is shown in Figure 5.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -178,8 +178,8 @@ RDF Schema (RDFS) extends RDF, by including the notion of classes and subclasses
 %\begin{center}{The RDF Schema Vocabulary, taken from \cite{_social_2007}:}\end{center}
 
 
-RDF(S) uses model-theory semantics , where meaning is defined by mappings from a model to a meta-model in which the truth of propositions is already uniquely determined.  This kind of mapping is called an interpretation, where symbols are mapped to the objects or relations they are describing. Constructs are used to put constraints on possible interpretations, so that unintended interpretations are excluded.  For example, we can use a construct to not allow two symbols used to represent persons to be mapped to the same person.
-RDF(S) also allows some axiomatic triples that are true for every model interpretation.  For example, rdfs:subPropertyOf follows the rules shown in the figure.
+RDF(s) uses model-theory semantics , where meaning is defined by mappings from a model to a meta-model in which the truth of propositions is already uniquely determined.  This kind of mapping is called an interpretation, where symbols are mapped to the objects or relations they are describing. Constructs are used to put constraints on possible interpretations, so that unintended interpretations are excluded.  For example, we can use a construct to not allow two symbols used to represent persons to be mapped to the same person.
+RDF(s) also allows some axiomatic triples that are true for every model interpretation.  For example, rdfs:subPropertyOf follows the rules shown in Figure 6.
 
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
@@ -239,11 +239,11 @@ XML and RDF are similar in many aspects.  XML has directed, ordered trees and RD
 \end{center}
 \end{figure*}
 
-When working with ontologies, a major concern in the semantic web, there is a hurdle to overcome with the decentralized definition of ontologies. Each individual or organization can define ontologies on their own with no oversight by a central body. This means that the same concept that is defined in one ontology can be defined again in another ontology and may even be defined differentlu. Another case is that two different ontologies use the same terminology for differing concepts. These two scenarios are defined by Gracia and Mena (\cite{gracia_dealing_2011}) as:
+When working with ontologies, a major concern in the semantic web, there is a hurdle to overcome with the decentralized definition of ontologies. Each individual or organization can define ontologies on their own with no oversight by a central body. This means that the same concept that is defined in one ontology can be defined again in another ontology and may even be defined differently. Another case is that two different ontologies use the same terminology for differing concepts. These two scenarios are defined by Gracia and Mena (\cite{gracia_dealing_2011}) as:
 \begin{center} \textbf{Semantic Ambiguity}: many intended meanings are associated with the same word.\end{center}
 \begin{center} \textbf{Semantic Redundancy}: many semantic descriptions are available to represent the same intended meaning.\end{center}
 
-An example of this problem is trying to determine the meaning of the word ''apple'' in a query such as ''Give me a list, ordered by calories, of recipes containing apple''. In the example query the term apple is likely apparent to a human reader, but to a device trying to determine the semantics of the word it can be difficult. If ''apple'' is run through an ontology it might come back with three results, apple the fruit, apple the tree, and apple the corporation. With these three results the query processor needs to determine what concept represented by apple does the user want to obtain in the results.
+An example of this problem is trying to determine the meaning of the word ''apple'' in a query such as ''Give me a list, ordered by calories, of recipes containing apple''. In the example query the term ''apple'' is likely apparent to a human reader, but to a device trying to determine the semantics of the word it can be difficult. If ''apple'' is run through an ontology it might come back with three results, apple the fruit, apple the tree, and Apple the corporation. With these three results the query processor needs to determine what concept represented by ''apple'' does the user want to obtain in the results.
 
 In order to find the correct concept, a search may cross many ontologies where each may have a definition of “apple” and its related concepts. This is where semantic ambiguity and redundancy start to have an effect. In order to filter the search down to likely candidates, word sense disambiguation techniques can be used.
 
@@ -251,7 +251,7 @@ There are first techniques to reduce semantic heterogeneity of the result set. T
 
 In sense clustering the relatedness of two concepts that share keywords are used to determine if the two concepts should be integrated into a single concept. When two concepts are merged together, then the ontology matching algorithm needs to be run again to calculate the similarities of the new integrated concept.
 
-After sense clustering comes sense disambiguation, in which the concept that the user is trying to query on is determined from the context of the query and the clusters created from sense clustering. This is done by taking the inputted query and breaking it down into keywords and context words to be utilized for the disambiguation and then searching through related concepts in order to find the best fitting one. The first step is to break down the query into individual words and select a keyword and then compute the relatedness of each word to the selected keyword. This works on the assumption that the context with the highest relatedness value is the most likely candidate. The relatedness calculation can be done using something like Normalized Google Distance. With a selected context, the clusters from sense clustering are then weighted within the context to find the likely concept that should be used. The final selection can be done by calculating relatedness, number of word overlaps between concept and context, and determining frequency of appearance of the concept in the context overall.
+After sense clustering comes sense disambiguation, in which the concept that the user is trying to query on is determined from the context of the query and the clusters created from sense clustering. This is done by taking the inputted query and breaking it down into keywords and context words to be utilized for the disambiguation and then searching through related concepts in order to find the best fitting one. The first step is to break down the query into individual words and select a keyword and then compute the relatedness of each word to the selected keyword. This works on the assumption that the context with the highest relatedness value is the most likely candidate. The relatedness calculation can be done using something like Normalized Google Distance. With a selected context, the clusters from sense clustering are then weighted within the context to find the likely concept that should be used. The final selection can be done by calculating relatedness, number of word overlaps between concept and context, and determining frequency of appearance of the concept in the context overall. Figure 7 shows a general picture of the authors' ideas.
 
 
 
@@ -287,32 +287,32 @@ The paper summarized in this section aims at introducing all existing ontologies
 %Daniela's table 4
 \begin{figure*}[t]
 \begin{center}
-\includegraphics[width=8in]{DanielaTable4.JPG}  
-\caption*{TABLE IV. Dublin Core (DC) Elements which describe properties of SIOC content items.}     
+\includegraphics[width=7in]{DanielaTable4.JPG}  
+\caption*{\textbf{TABLE IV. Dublin Core (DC) Elements which describe properties of SIOC content items.}}     
 \label{fig1}
 \end{center}
 \end{figure*}
 
 
 
-\subsubsection{Introduction}
+\subsubsection{Problem Introduction}
 The authors claim that currently, there are not any established framework that aggregate ontologies. For social networks, which are considered to be ''online networks which indicate connections between actors in social activities'' \cite{6190504}, some interoperability has been reached by the use of ontologies, but no efforts have been done in inter-linking different social network sites. Because of their current isolation, there is a need to expand the potential such networks offer and find new ways of using ontologies to build a better social network environment that could bring forward more relationships among user-generated content in such sites. The studies of semantic web over the years have not proved successful in extracting relationships and integrating social network sites, so the authors propose a framework to be used to address the issue. 
 
 
 
-The main challenge of social networks is their inherent nature and the fact that multiple accounts could likely exist for the same user. Furthermore, because of data inconsistency, it is difficult to implement inter-operability and it is also difficult to link multiple social network accounts. Sematic Web was introduced as a technology to make social web sites more connected and to gain more interoperability through metadata creation and inter-connected vocabularies. Existing semantic web vocabulary frameworks such as SIOC (Semantically Interlinked Online Communities) and FOAF (Friend of-a-Friend) could help on this; hence the authors explain multiple vocabularies could be used together to build a good interoperability framework. 
+The main challenge of social networks is their inherent nature and the fact that multiple accounts could likely exist for the same user. Furthermore, because of data inconsistency, it is difficult to implement inter-operability and it is also difficult to link multiple social network accounts. Semantic Web was introduced as a technology to make social web sites more connected and to gain more interoperability through metadata creation and inter-connected vocabularies. Existing semantic web vocabulary frameworks such as SIOC (Semantically Interlinked Online Communities) and FOAF (Friend of-a-Friend) could help on this; hence the authors explain multiple vocabularies could be used together to build a good interoperability framework. 
 
 As an example of their use, the authors explain a likely scenario, saying that ''SIOC ontology uses FOAF vocabulary to explore a person’s attributes, and DC (Dublin Core) vocabulary to illustrate SIOC content properties”'' \cite{6190504}. The paper goes on presenting and describing the most dominant and practical ontologies in existence for Semantic Web and how they can be combined to help build an exhaustive framework for social networks; hence proposing a possible solution to the problem.
 
 \subsubsection{Literature Review}
-Given the previous definition of social networks, we can see what the impact of using a semantic network can be. According to the authors, '''a semantic network is conceptually a group of entities that are connected through their relationship''' \cite{6190504}. This kind of network provides useful information about individual users that could be used to extract relationships between social network sites. Plainly said, ''Sematic Web is the use of new technologies and standards which allow data interpretation and information processing on the World Wide Web'' \cite{6190504}. Technologies such as RDF (Resource Description Framework) and OWL, can be used in Semantic Web for this purpose. Acquiring related data from social network sites has been challenging, because of the intense amount of data and its varying nature. However, Semantic Web and its technologies such as ontologies and vocabularies have methods for better data presentation and provide the ability for machines to automatically originate data from the web, which is an improvement made possible through these new technologies.
+Given the previous definition of social networks, we can see what the impact of using a semantic network can be. According to the authors, '''a semantic network is conceptually a group of entities that are connected through their relationship''' \cite{6190504}. This kind of network provides useful information about individual users that could be used to extract relationships between social network sites. Plainly said, ''Semantic Web is the use of new technologies and standards which allow data interpretation and information processing on the World Wide Web'' \cite{6190504}. Technologies such as RDF (Resource Description Framework) and OWL, can be used in Semantic Web for this purpose. Acquiring related data from social network sites has been challenging, because of the intense amount of data and its varying nature. However, Semantic Web and its technologies such as ontologies and vocabularies have methods for better data presentation and provide the ability for machines to automatically originate data from the web, which is an improvement made possible through these new technologies.
 
 
 
 
 
 
-Ontologies are ''tools to analyze and extract relationships among web sites'' \cite{6190504} since as the authors explain, ontologies can ''describe the meaning of a formal vocabulary, identify knowledge within the vocabulary and extract semantics from interconnections on the web'' \cite{6190504}. This capability makes them extremely useful for Sematic Web: they can discover and categorize relationships that exist and delineate relationships between terms within the documents or files that form the Semantic Web Services. 
+Ontologies are ''tools to analyze and extract relationships among web sites'' \cite{6190504} since as the authors explain, ontologies can ''describe the meaning of a formal vocabulary, identify knowledge within the vocabulary and extract semantics from interconnections on the web'' \cite{6190504}. This capability makes them extremely useful for Semantic Web: they can discover and categorize relationships that exist and delineate relationships between terms within the documents or files that form the Semantic Web Services. 
 
 The four main ontologies and vocabularies extensively employed on the web which are explained in the paper are presented in the list below, the way the authors described them:
 \begin{itemize}
@@ -335,9 +335,10 @@ Based on the classes and properties related to each ontology, the authors explai
 
 The classes and properties of each mentioned ontology are shown in TABLE I, TABLE II, TABLE III, and TABLE IV. These tables were taken from the original paper, as well as complemented using sources \cite{skos},\cite{foaf},\cite{sioc}, and \cite{dcmi}. 
 
+\subsubsection{Relationships Among the Ontologies}
+
 Figure 8 also shows the relationships between the four ontologies and it helps explain how to create a framework using them. FOAF documents can be used to describe personal information of social network profiles, which can be enhanced by the use of DC’s elements that in turn would help describe the user’s information more meaningfully. Then, the SIOC ontology can be used to map its classes and properties that describe activities in online social community sites to existing vocabularies such as FOAF, RSS and SKOS. The authors use a common example to illustrate these relationships, saying that the property foaf:Person describes a person who also happens to have different online accounts. Then, the sioc:User class defines the same person on different online community sites. This person/user can create any content on his/her sites by using sioc:Item or post content by using sioc:Post. They are related since the class sioc:User is a sub-class of foaf:OnlineAccount and the property foaf:holdsOnlineAccount is able to link a person to all his/her online accounts. SKOS classes and properties such as skos:Concept and skos:isSubjectOf describe the contents of the posts and the information itself within the user’s online accounts. Therefore, the three ontologies (SIOC, FOAF and SKOS) can be used together in collaboration to produce an integrated framework.
 
-Conclusion for this paper:
 
 In the authors' opinion, the related classes and properties of the discussed semantic web ontologies would help build a holistic framework that can describe user-generated content in social network sites and connect them appropriately. They propose that the use of FOAF can help define multiple accounts in social network sites belonging to the same user, which would allow for SIOC to articulate user-content on the sites. Then by using SKOS, it would be possible to define the most related ontology to each user-content and tag it appropriately.
 
@@ -362,7 +363,7 @@ A common framework RDFs/OWL that can be used to generalize and relate social net
 \item
 A means of linking users across social networks and then consolidating their content so that the user and their content as a whole can be queried.
 \item
-A means of detecting a user being a member of multiple social networking sites and linking those two accounts to one resource by filtering out users that share similar attributes and identifying characteristics.
+A means of detecting a user being a member of multiple social networking sites and linking those multiple accounts to one resource by filtering out users that share similar attributes and identifying characteristics.
 \end{itemize}
 
 %
