@@ -6,11 +6,11 @@
 	<display-name>hw3q1</display-name>
 	<context-param>
 		<param-name>dbusername</param-name>
-		<param-value>jshaska</param-value>
+		<param-value>!USERNAME!</param-value>
 	</context-param>
 	<context-param>
 		<param-name>dbpassword</param-name>
-		<param-value>58Kadate</param-value>
+		<param-value>!PASSWORD!</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>home</servlet-name>
