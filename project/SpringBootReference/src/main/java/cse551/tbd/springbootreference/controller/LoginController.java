@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cse551.tbd.springbootreference.controller.dto.LoginRequest;
-import cse551.tbd.springbootreference.controller.dto.LoginResponse;
 import cse551.tbd.springbootreference.controller.dto.LogoutResponse;
 import cse551.tbd.springbootreference.service.LoginService;
 
@@ -27,9 +26,9 @@ public class LoginController {
     private LoginService loginService;
 
     @RequestMapping(method = POST)
-    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
+    public ResponseEntity<String> login(@RequestBody LoginRequest request) {
         String token = this.loginService.login(request.getUsername(), request.getPassword());
-        return new ResponseEntity<LoginResponse>(new LoginResponse(token), HttpStatus.OK);
+        return new ResponseEntity<String>(token, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{token}", method = DELETE)

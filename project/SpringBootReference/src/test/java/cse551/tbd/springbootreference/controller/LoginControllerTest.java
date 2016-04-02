@@ -18,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import cse551.tbd.springbootreference.controller.dto.LoginRequest;
-import cse551.tbd.springbootreference.controller.dto.LoginResponse;
 import cse551.tbd.springbootreference.controller.dto.LogoutResponse;
 import cse551.tbd.springbootreference.service.LoginService;
 
@@ -34,11 +33,11 @@ public class LoginControllerTest {
     @Test
     public void canLogin() throws Exception {
         LoginRequest request = new LoginRequest("username", "password");
-        LoginResponse expected = new LoginResponse("token");
+        String expected = "token";
 
-        Mockito.when(this.service.login(request.getUsername(), request.getPassword())).thenReturn(expected.getToken());
+        Mockito.when(this.service.login(request.getUsername(), request.getPassword())).thenReturn(expected);
 
-        ResponseEntity<LoginResponse> actual = this.controller.login(request);
+        ResponseEntity<String> actual = this.controller.login(request);
 
         assertThat(actual.getBody(), is(expected));
     }
