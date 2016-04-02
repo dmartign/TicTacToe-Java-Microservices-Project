@@ -2,12 +2,15 @@ package tbd.gateway.web;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import tbd.gateway.Utils;
 import tbd.gateway.login.LoginClient;
+import tbd.gateway.model.domain.User;
 
 public class LoginServlet extends HttpServlet {
 
@@ -19,13 +22,14 @@ public class LoginServlet extends HttpServlet {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
 
-        String token = this.loginClient.loginUser(email, password);
 
-        /*-
-        UserDAO userDAO = (UserDAO) this.getServletContext().getAttribute("userdao");
-        if (!Utils.nullOrBlank(email)) {
-            User user = userDAO.findUserByEmail(email);
-            if (user != null && user.getPassword().matches(password)) {
+        
+        if (!Utils.nullOrBlank(email) && !Utils.nullOrBlank(password)) {
+        	String token = this.loginClient.loginUser(email, password);
+            if (!Utils.nullOrBlank(token)) {
+            	User user = new User();
+            	user.setName(email);
+            	user.setId(token);
                 req.getSession().setAttribute("user", user);
                 resp.sendRedirect("home.do");
             } else {
@@ -33,7 +37,6 @@ public class LoginServlet extends HttpServlet {
                 dispatcher.forward(req, resp);
             }
         }
-         */
 
     }
 
