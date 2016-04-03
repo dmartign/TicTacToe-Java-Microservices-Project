@@ -1,11 +1,13 @@
-
 var io = require('socket.io').listen(3000);
+var cookieParser = require('socket.io-cookie');
+var http = require('http');
+io.use(cookieParser);
 
 //chatroom
 var numUsers = 0;
 
 io.on('connection', function(socket){
-	
+	console.log('connection');
 	var addedUser = false;
 	
 	
@@ -17,8 +19,8 @@ io.on('connection', function(socket){
 		});
 	});
 	
-	//when the client emits 'add user', this listens and executes
-	socket.on('add user',function(username){
+	//Register this socket to this user
+	function registerUser(username){
 		if (addedUser) return;
 		
 		//we store the username in the socket session for this client
@@ -33,12 +35,25 @@ io.on('connection', function(socket){
 			username:socket.username,
 			numUsers:numUsers
 		});
+	}
+	var cookie=socket.handshake.headers['cookie'];
+	console.log(`Cookie: ${cookie.userToken}`);
+	var user;
+	http.get('http://localhost:9001/authentication/login/' + cookie.userToken, (res) => {
+		// consume response body
+		res.on('data',(data)=>{
+			user = JSON.parse(data.toString('utf8'));
+			console.log(`${user.username} Connected`);
+			registerUser(user.username);
+		});
+	}).on('error', (e) => {
+		console.log(`Got error: ${e.message}`);
 	});
-	
 	
 	
 	//when the user disconnects, do this
 	socket.on('disconnect',function(){
+		console.log(`${user.username} Disconnected`);
 		if(addedUser){
 			--numUsers;
 		
