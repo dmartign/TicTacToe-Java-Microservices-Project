@@ -14,7 +14,7 @@ public class LoginClient {
 
         String postData = "{\"username\":\"" + email + "\",\"password\":\"" + password + "\"}";
         int postDataLength = postData.length();
-        String request = "http://localhost:9001/reference/login";
+        String request = "http://localhost:9001/authentication/login";
         URL url;
         String token = null;
         try {

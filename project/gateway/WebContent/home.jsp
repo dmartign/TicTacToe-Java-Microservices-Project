@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="js/chat.js"></script>
 </head>
 <body>
