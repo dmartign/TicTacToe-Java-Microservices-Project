@@ -9,11 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import cse551.tbd.gameserver.Application;
+import cse551.tbd.gameserver.GameServerApplication;
 import cse551.tbd.gameserver.domain.Game;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Application.class)
+@SpringApplicationConfiguration(GameServerApplication.class)
 public class GameRepositoryTest {
 
     @Autowired
@@ -21,8 +21,9 @@ public class GameRepositoryTest {
 
     @Test
     public void shouldFindGameById() throws Exception {
-        Integer gameId = 0;
-        Game game = Game.builder().gameId(gameId).build();
+        String gameId = "0";
+        Game game = new Game();
+        game.setGameId(gameId);
 
         game = this.repository.save(game);
 
