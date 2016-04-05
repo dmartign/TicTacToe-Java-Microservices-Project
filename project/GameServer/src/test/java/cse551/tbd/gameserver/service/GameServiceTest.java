@@ -4,6 +4,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.sameInstance;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -25,6 +26,9 @@ public class GameServiceTest {
 
     @Mock
     GameRepository gameRepository;
+
+    @Mock
+    GameMoveValidator moveValidator;
 
     @Test
     public void shouldBeAbleToGetAGame() throws Exception {
@@ -51,6 +55,7 @@ public class GameServiceTest {
         gameEntity.setPlayer1(user);
         gameEntity.setPlayer2(user2);
         Character[][] oldBoard = gameEntity.getBoard();
+        when(this.moveValidator.validate(any(), any(), any())).thenReturn(true);
         when(this.gameRepository.findByGameId(game.getGameId())).thenReturn(gameEntity);
 
         boolean actual = this.gameService.updateGame(user, game);
@@ -61,6 +66,40 @@ public class GameServiceTest {
         assertThat(gameEntity.getBoard(), is(game.getBoard()));
         assertThat(gameEntity.getBoard(), not(sameInstance(oldBoard)));
         assertThat(actual, is(true));
+    }
+
+    @Test
+    public void shouldEnsureMoveIsValid() throws Exception {
+        User user = Mockito.mock(User.class);
+        Game updatedGame = Mockito.mock(Game.class);
+        String gameId = "0";
+        updatedGame.setGameId(gameId);
+        Game previousGame = Mockito.mock(Game.class);
+
+        when(this.gameRepository.findByGameId(updatedGame.getGameId())).thenReturn(previousGame);
+        when(this.moveValidator.validate(user, updatedGame, previousGame)).thenReturn(true);
+
+        boolean actual = this.gameService.updateGame(user, updatedGame);
+
+        assertThat(actual, is(true));
+    }
+
+    @Test
+    public void shouldNotUpdateOnInvalidMove() throws Exception {
+        User user = Mockito.mock(User.class);
+        Game updatedGame = Mockito.mock(Game.class);
+        String gameId = "0";
+        updatedGame.setGameId(gameId);
+        Game previousGame = Mockito.mock(Game.class);
+        Character[][] oldBoard = previousGame.getBoard();
+
+        when(this.gameRepository.findByGameId(updatedGame.getGameId())).thenReturn(previousGame);
+        when(this.moveValidator.validate(user, updatedGame, previousGame)).thenReturn(false);
+
+        boolean actual = this.gameService.updateGame(user, updatedGame);
+
+        assertThat(actual, is(false));
+        assertThat(previousGame.getBoard(), sameInstance(oldBoard));
     }
 
     @Test
