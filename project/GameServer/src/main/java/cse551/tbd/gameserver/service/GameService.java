@@ -1,7 +1,11 @@
 package cse551.tbd.gameserver.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.google.common.collect.Lists;
 
 import cse551.tbd.gameserver.domain.Game;
 import cse551.tbd.gameserver.domain.User;
@@ -33,6 +37,11 @@ public class GameService {
         game.setPlayer2(user2);
         this.gameRepository.save(game);
         return game;
+    }
+
+    public List<Game> getAllGame() {
+        List<Game> games = Lists.newArrayList(this.gameRepository.findAll());
+        return games;
     }
 
 }

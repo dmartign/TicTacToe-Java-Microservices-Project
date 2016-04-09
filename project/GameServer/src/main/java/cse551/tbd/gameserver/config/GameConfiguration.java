@@ -19,7 +19,9 @@ public class GameConfiguration implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+        this.gameRepository.deleteAll();
         this.createGame("0", PLAYER1, PLAYER2);
+        this.createGame("1", PLAYER1, PLAYER2);
     }
 
     private void createGame(String gameId, User player1, User player2) {
