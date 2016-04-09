@@ -5,8 +5,6 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cse551.tbd.gameserver.client.AuthenticationClient;
 import cse551.tbd.gameserver.domain.Game;
+import cse551.tbd.gameserver.domain.Move;
 import cse551.tbd.gameserver.domain.User;
 import cse551.tbd.gameserver.service.GameService;
 
@@ -26,8 +25,6 @@ import cse551.tbd.gameserver.service.GameService;
 @CrossOrigin(origins = "*", allowCredentials = "true")
 @RequestMapping(value = "/game")
 public class GameController {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(GameController.class);
 
     @Autowired
     private GameService gameService;
@@ -52,6 +49,19 @@ public class GameController {
         User user = this.authClient.retrieveUser(userToken);
         game.setGameId(gameId);
         this.gameService.updateGame(user, game);
+        return new ResponseEntity<Object>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/{gameId}/move", method = POST)
+    public ResponseEntity<?> postGameMove(@CookieValue("userToken") String userToken, @PathVariable("gameId") String gameId, @RequestBody Move move) {
+        User user = this.authClient.retrieveUser(userToken);
+        if (user == null) {
+            throw new IllegalArgumentException("No User");
+        }
+        if (move.getRow() == null || move.getColumn() == null) {
+            throw new IllegalArgumentException("Illegal Move" + move.toString());
+        }
+        this.gameService.updateGameMove(user, gameId, move);
         return new ResponseEntity<Object>(HttpStatus.OK);
     }
 

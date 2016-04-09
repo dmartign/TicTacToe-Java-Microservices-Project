@@ -20,6 +20,7 @@
 <script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="js/chat.js"></script>
 <script type="text/javascript" src="js/gamelist.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
 </head>
 <body>
 	
@@ -46,7 +47,7 @@
 		
 		<tr>
 			<td style="min-width67%;width:67%;border-color: red;border-style: solid;">
-				<table>
+				<table id="gameBoard">
 					<tr><td>X</td><td>X</td><td>X</td></tr>
 					<tr><td>X</td><td>X</td><td>X</td></tr>
 					<tr><td>X</td><td>X</td><td>X</td></tr>

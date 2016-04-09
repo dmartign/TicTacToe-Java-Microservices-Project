@@ -19,15 +19,11 @@ function createGame(){
 	xhr.send(JSON.stringify(user));
 }
 
-function joingame(game){
-	alert("Joining game " + game);
-}
-
 function populateGames(games){
 	var gamelist = document.getElementById("gamelist");
 	gamelist.innerHTML = "";
 	games.forEach(function(game){
-		gamelist.innerHTML += "<tr><td>"+game.player1.username + " vs " + game.player2.username + "</td><td><input type='button' value='Join' onclick='joingame(\""+game.gameId+"\")'></td></tr>"
+		gamelist.innerHTML += "<tr><td>"+game.player1.username + " vs " + game.player2.username + "</td><td><input type='button' value='Join' onclick='joinGame(\""+game.gameId+"\")'></td></tr>"
 	});
 }
 
