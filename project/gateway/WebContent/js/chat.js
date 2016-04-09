@@ -1,32 +1,15 @@
-
- var socket = io("http://localhost:3000");
- socket.emit('add user',"name");
- 
- 
+var socket = io("http://localhost:3000");
  
 function sendChat(){
-
 	var message = document.getElementById("chatInput").value; 
 	socket.emit('new message',message);
 	document.getElementById("chatInput").value = "";
 	document.getElementById("chatInput").focus();
-	tryscrollDown("chatBox");
 }
 
 function addChatMessage(data){
 	document.getElementById("chatBox").innerHTML = document.getElementById("chatBox").innerHTML + data.username + " : " +data.message + "<br/>";
 }
-
-//document.getElementById('chatInput').onkeydown = function(e){
-//    if (!e) e = window.event;
-//    var keyCode = e.keyCode || e.which;
-//    if (keyCode == '13'){
-//      // Enter pressed
-//    	Alert('here in the new one');
-//      return false;
-//    }
-//  }
-
 
 function tryscrollDown(id){
 	 var objDiv = document.getElementById(id);
@@ -42,7 +25,6 @@ function tryscrollDown(id){
 		 f.style.height = "0px";
 		 if (f.focus) f.focus();
 		 if (objDiv.removeChild) objDiv.removeChild(f);
-		 
 	 }
 }
 
@@ -59,36 +41,11 @@ function checkForEnter(event){
 	
 }
 
-
-
-//onkeydown = function (event){
-//	checkForEnter(event);
-//	return true;
-//}
-
-
-
-
-
 socket.on('new message', function (data) {
     addChatMessage(data);
+    tryscrollDown("chatBox");
   });
 
 socket.on('user joined',function(data){
 	document.getElementById("chatBox").innerHTML = document.getElementById("chatBox").innerHTML + data.username + " has joined " + data.numUsers +  "<br/>";
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
