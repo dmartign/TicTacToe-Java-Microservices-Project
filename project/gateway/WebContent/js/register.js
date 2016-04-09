@@ -23,10 +23,7 @@ function registerUser(){
 	function doRequest(){
 		xhr.send(addParam('email') + '&' +
 		addParam('password') + '&' +
-		addParam('name') + '&' +
-		addParam('streetaddress') + '&' +
-		addParam('state') + '&' +
-		addParam('zipcode'))
+		addParam('name') + '&' )
 	}
 	doRequest();
 }
