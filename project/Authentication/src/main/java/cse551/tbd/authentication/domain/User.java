@@ -18,11 +18,11 @@ public class User {
     @Id
     private String username;
     private String password;
+    private String email;
     @JsonIgnore
     private String token;
 
     // Disables ever serializing the password going out
-    @JsonIgnore
     public String getPassword() {
         return this.password;
     }
