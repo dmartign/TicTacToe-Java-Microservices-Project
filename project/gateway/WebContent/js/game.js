@@ -25,17 +25,7 @@ function updateGame(){
 }
 
 function renderGame(game){
-	var gameBoard = document.getElementById("gameBoard");
-	//Fix this since table doesn't technically support setting innerHTML
-	newHTML = "";
-	for(i = 0 ; i < game.board.length ; i++){
-		newHTML += "<tr>"
-		for(j = 0 ; j < game.board[i].length ; j++){
-			newHTML+= "<td style=\"border-color: black;border-style: solid;\" onclick=\"gameClick("+i+","+j+")\">"+ (game.board[i][j] == " " ? "&nbsp;" : game.board[i][j]) + "</td>"
-		}
-		newHTML+= "</tr>"
-	}
-	gameBoard.innerHTML = newHTML;
+	drawGame(game.board);
 }
 
 function gameClick(row, column){

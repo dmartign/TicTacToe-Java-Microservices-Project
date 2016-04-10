@@ -1,40 +1,4 @@
-<html>
-
-<head>
-<title>Tic Tac Toe</title>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-
-<script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
-
-<script id="shader-fs" type="x-shader/x-fragment">
-    precision mediump float;
-// http://learningwebgl.com/blog/?p=134
-	//varying vec4 vColor; 	// new
-	
-    void main(void) {
-        gl_FragColor = vec4(0.5, 0.5, 1.0, 1.0); //vColor;
-    }
-</script>
-
-<script id="shader-vs" type="x-shader/x-vertex">
-    attribute vec3 aVertexPosition;
-	//attribute vec4 aVertexColor;	// new
-
-    uniform mat4 uMVMatrix;
-    uniform mat4 uPMatrix;
-	
-	//varying vec4 vColor;	// new
-
-    void main(void) {
-        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-		//vColor = aVertexColor; // new
-    }
-</script>
-
-
-<script type="text/javascript">
-
-	var mouse = { x: 0, y: 0 , clicked: false};
+var mouse = { x: 0, y: 0 , clicked: false};
 	var renderWIDTH = 600;
 	var renderHEIGHT = 600;
 	var xCoord;
@@ -54,15 +18,14 @@
         var canvas = document.getElementById('tictactoe-canvas');
         var context = canvas.getContext('2d');
 	    var mousePos = getMousePos(canvas, event);
-		console.log(mousePos.x + ", " + mousePos.y);
 		mouse.x = mousePos.x;
 		mouse.y = mousePos.y;
 		xCoord = parseInt(mouse.x/(renderWIDTH/3));
 		yCoord = parseInt(mouse.y/(renderHEIGHT/3));
-		mouse.clicked = true;
-		console.log(xCoord +", "+yCoord);
-		//drawScene();
-		drawGame([['X','X','O'],['X','X','O'],['O','X','O']]);
+		if(xCoord <= 2 && xCoord >= 0 && yCoord <= 2 && yCoord >= 0){
+			mouse.clicked = true;
+			gameClick(yCoord, xCoord);
+		}
 	}
 	
 	var shape;
@@ -276,7 +239,7 @@
 				if(game[i][j] == 'X') {
 					drawTriangle(x,y,z);
 				}
-				else { // if 
+				else if(game[i][j] == 'O'){ 
 					drawSquare(x,y,z);
 				}
 			}
@@ -308,17 +271,3 @@
 
         drawScene();
     }
-
-</script>
-</head>
-
-
-<body onload="webGLStart()">
-    <canvas id="tictactoe-canvas" style="border: none;" width="600" height="600"></canvas> 
-</body>
-
-</html>
-
-
-
-
