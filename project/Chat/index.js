@@ -1,3 +1,5 @@
+//inspired by https://github.com/socketio/socket.io/tree/master/examples/chat
+
 var io = require('socket.io').listen(3000);
 var cookieParser = require('socket.io-cookie');
 var http = require('http');

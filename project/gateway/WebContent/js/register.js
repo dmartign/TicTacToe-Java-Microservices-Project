@@ -4,13 +4,14 @@
 //http://stackoverflow.com/questions/9713058/sending-post-data-with-a-xmlhttprequest
 function registerUser(){
 	var xhr = new XMLHttpRequest();
-	xhr.open('POST', 'register', true);
-	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+	xhr.open('POST', 'http://localhost:9001/authentication/user', true);
+	xhr.setRequestHeader('Content-type', 'application/json');
+	xhr.withCredentials = true;
 	xhr.onload = function () {
 		// do something to response
 		console.log(this.responseText);
 		document.getElementById('message').innerHTML = this.responseText;
-		if(this.responseText === "Success"){
+		if(this.responseText === "true"){
 			window.location.href = 'login.html'
 		}
 	}
@@ -21,12 +22,12 @@ function registerUser(){
 	}
 
 	function doRequest(){
-		xhr.send(addParam('email') + '&' +
-		addParam('password') + '&' +
-		addParam('name') + '&' +
-		addParam('streetaddress') + '&' +
-		addParam('state') + '&' +
-		addParam('zipcode'))
+		user = {
+				email:document.getElementById('email').value,
+				password:document.getElementById('password').value,
+				username:document.getElementById('username').value
+		}
+		xhr.send(JSON.stringify(user));
 	}
 	doRequest();
 }

@@ -2,10 +2,8 @@ package cse551.tbd.authentication.controller;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.springframework.http.HttpStatus.OK;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +19,6 @@ import org.springframework.http.ResponseEntity;
 
 import cse551.tbd.authentication.controller.dto.LoginRequest;
 import cse551.tbd.authentication.controller.dto.LogoutResponse;
-import cse551.tbd.authentication.domain.User;
 import cse551.tbd.authentication.service.LoginService;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -54,19 +51,6 @@ public class LoginControllerTest {
 
         verify(this.service).logout(token);
         assertThat(actual, is(expected));
-    }
-
-    @Test
-    public void canGetUserFromToken() throws Exception {
-        String token = "token";
-        User expected = mock(User.class);
-
-        when(this.service.getUser(token)).thenReturn(expected);
-
-        ResponseEntity<User> actual = this.controller.getUser(token);
-
-        assertThat(actual.getStatusCode(), is(OK));
-        assertThat(actual.getBody(), is(expected));
     }
 
     @Test
