@@ -7,6 +7,7 @@
 <style>
 	.CHAT {
 		word-wrap:break-word;
+		table-layout:fixed;
 		overflow-y:auto;
 		width:100%;
 		max-width:100%;
@@ -61,16 +62,20 @@
 	    out.write("Welcome, " + user.getName());
 	%>
 	<br />
-	<input id="challengeinput" type="text"/><input type="button" value="Challenge" onclick="createGame()")/>
+	<div class="container-fluid">
+	<div class="row-fluid">
+	<input id="challengeinput" type="text"/><input type="button" value="Challenge" onclick="createGame()"/>
 	<table id="gamelist"></table>
-	<canvas id="tictactoe-canvas" style="border: none;" width="600"
-		height="600"></canvas>
-	<div class="col-xs-4 col-sm-6" id="chatbox">
-		<br /> <input style="width: 75%;" type="text" id="chatInput"
-			onkeydown="checkForEnter()" /><input id="chatEnter"
-			style="width: 20%;" type="button" value="Send" onclick="sendChat()" />
 	</div>
-	
+	<div class="row-fluid">
+	<canvas id="tictactoe-canvas" style="border: none;"
+					width="600" height="600"></canvas>
+					</div>
+					<div class="row-fluid">
+	<div class="CHAT" id="chatbox"></div>
+	<br /><input style="width: 75%;" type="text" id="chatInput" onkeydown="checkForEnter()" /><input id="chatEnter" style="width: 20%;" type="button" value="Send" onclick="sendChat()" />
+	</div>
+	</div>
 	<script type="text/javascript" src="js/webgl.js"></script>
 </body>
 	

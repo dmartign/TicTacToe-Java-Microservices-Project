@@ -1,4 +1,4 @@
-var gameId = "";
+var gameId;
 var gameInterval;
 function joinGame(id){
 	gameId = id;
@@ -29,6 +29,9 @@ function renderGame(game){
 }
 
 function gameClick(row, column){
+	if(!gameId){
+		return;
+	}
 	move = {
 			row:row,
 			column:column
