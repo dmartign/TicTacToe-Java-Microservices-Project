@@ -6,15 +6,12 @@ import lombok.NoArgsConstructor;
 
 import org.springframework.data.annotation.Id;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Game {
 
     @Id
-    @JsonIgnore
     private String gameId;
     private User player1;
     private User player2;

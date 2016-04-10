@@ -9,8 +9,8 @@
 		word-wrap:break-word;
 		overflow-y:auto;
 		width:100%;
-		height:100px;
-	
+		max-width:100%;
+		height:10em;
 	}
 </style>
 
@@ -22,6 +22,8 @@
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://localhost:3000/socket.io/socket.io.js"></script>
 <script type="text/javascript" src="js/chat.js"></script>
+<script type="text/javascript" src="js/gamelist.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
 </head>
 <body>
 	
@@ -63,9 +65,14 @@
 		
 	<!-- 
 	<table style="width:90%;">
+		<tr><td><input id="challengeinput" type="text"/><input type="button" value="Challenge" onclick="createGame()")/></td></tr>
 		<tr>
-			<td style="width:67%;border-color: red;border-style: solid;">
-				<table>
+					<td><table id="gamelist"></table></td>
+		</tr>
+		
+		<tr>
+			<td style="min-width67%;width:67%;border-color: red;border-style: solid;">
+				<table id="gameBoard">
 					<tr><td>X</td><td>X</td><td>X</td></tr>
 					<tr><td>X</td><td>X</td><td>X</td></tr>
 					<tr><td>X</td><td>X</td><td>X</td></tr>
@@ -74,24 +81,11 @@
 			</td>
 			
 			
-	  		<td style="width:33%;border-color: green;border-style: solid;">
-	  			<div class="CHAT" id="chatBox">
-	  			</div><br/>
-	  				<input style="width:75%;" type="text" id="chatInput" onkeydown="checkForEnter()"/><input id="chatEnter" style="width:20%;" type="button" value="Send" onclick="sendChat()"/>
-	  			
-<%-- 
- <input style="width:75%;" type="text" id="chatInput"/><input style="width:20%;" type="button" value="Send" onclick="sendChat()"/>
-  --%> 
+	  		<td style="width:33%;border-color: green;border-style: solid;max-width: 33%">
+	  			<div class="CHAT" id="chatBox"></div><br/>
+	  			<input style="width:75%;" type="text" id="chatInput" onkeydown="checkForEnter()"/><input id="chatEnter" style="width:20%;" type="button" value="Send" onclick="sendChat()"/>
 	  		</td>
 		</tr>
-		
-		<%-- 
-		<tr>
-		  		<td  style="width:33%;">
-		  			<div class="CHAT" id="chatBox2"><br/></div><br/><input style="width:75%;" type="text" id="chatInput" onkeydown="checkForEnter()"/><input id="chatEnter" style="width:20%;" type="button" value="Send" onclick="sendChat()"/>
-		  		</td>
-		</tr>
-	--%>
 	</table>
 	-->
 	</div>

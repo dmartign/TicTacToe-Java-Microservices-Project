@@ -6,6 +6,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,10 +46,17 @@ public class LoginController {
         return new ResponseEntity<List<String>>(this.loginService.getLoggedInUsers(), HttpStatus.OK);
     }
 
+    @Data
+    @AllArgsConstructor
+    private class UserName {
+        private String username;
+    }
+
     @RequestMapping(value = "/{token}", method = GET)
-    public ResponseEntity<User> getUser(@PathVariable("token") String token) {
+    public ResponseEntity<UserName> getUser(@PathVariable("token") String token) {
         User user = this.loginService.getUser(token);
-        return new ResponseEntity<User>(user, HttpStatus.OK);
+
+        return new ResponseEntity<UserName>(new UserName(user.getUsername()), HttpStatus.OK);
     }
 
 }
