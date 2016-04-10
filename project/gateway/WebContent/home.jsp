@@ -3,6 +3,7 @@
 <%@ page import="tbd.gateway.model.domain.User"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <style>
 	.CHAT {
 		word-wrap:break-word;
@@ -12,7 +13,9 @@
 	
 	}
 </style>
+
 <head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home</title>
 
@@ -37,6 +40,28 @@
 	
 	<input type="button" value = "Scroll" onclick="tryscrollDown('chatBox')" />
 	<br/>
+	<div class="container">
+		<div class="row" id="game">
+			<div class="col-sm-9">
+				<div class="row">
+					<div class="col-xs-8 col-sm-6" id="game">
+        				<table>
+							<tr><td>X</td><td>X</td><td>X</td></tr>
+							<tr><td>X</td><td>X</td><td>X</td></tr>
+							<tr><td>X</td><td>X</td><td>X</td></tr>
+						</table>
+      				</div>
+      				<div class="col-xs-4 col-sm-6" id="chatbox">
+        				<br/>
+	  					<input style="width:75%;" type="text" id="chatInput" onkeydown="checkForEnter()"/><input id="chatEnter" style="width:20%;" type="button" value="Send" onclick="sendChat()"/>				
+         			</div>
+				
+				</div>
+			</div>
+		</div>
+		
+		
+	<!-- 
 	<table style="width:90%;">
 		<tr>
 			<td style="width:67%;border-color: red;border-style: solid;">
@@ -68,6 +93,8 @@
 		</tr>
 	--%>
 	</table>
+	-->
+	</div>
 </body>
 	
 
