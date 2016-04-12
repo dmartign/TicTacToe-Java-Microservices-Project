@@ -15,6 +15,7 @@ import cse551.tbd.gameserver.domain.User;
 public class GameService {
 
     private static final boolean PLAYER1 = false;
+    private static final boolean PLAYER2 = !PLAYER1;
     @Autowired
     private GameRepository gameRepository;
 
@@ -71,7 +72,7 @@ public class GameService {
         }
         if (playerTurn == PLAYER1 && gameEntity.getPlayer1().getUsername().equals(user.getUsername())) {
             gameEntity.getBoard()[move.getRow()][move.getColumn()] = 'X';
-        } else if (gameEntity.getPlayer2().getUsername().equals(user.getUsername())) {
+        } else if (playerTurn == PLAYER2 && gameEntity.getPlayer2().getUsername().equals(user.getUsername())) {
             gameEntity.getBoard()[move.getRow()][move.getColumn()] = 'O';
         } else {
             return false;
@@ -102,7 +103,7 @@ public class GameService {
         for (Point[] combination : winningCombinations) {
             if (board[combination[0].column][combination[0].row] != ' '
                     && board[combination[0].column][combination[0].row] == board[combination[1].column][combination[1].row]
-                            && board[combination[0].column][combination[0].row] == board[combination[2].column][combination[2].row]) {
+                    && board[combination[0].column][combination[0].row] == board[combination[2].column][combination[2].row]) {
                 return true;
             }
         }
