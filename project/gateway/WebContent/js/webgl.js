@@ -1,9 +1,12 @@
-var mouse = { x: 0, y: 0 , clicked: false};
+//Note: WebGL basic code and ideas was obtained from tutorials, 
+//especially http://learningwebgl.com/blog/?p=28
+// shaders are declared in home.jsp and initialized here. All the rendering takes place here
+
+	var mouse = { x: 0, y: 0 , clicked: false};
 	var renderWIDTH = 600;
 	var renderHEIGHT = 600;
 	var xCoord;
 	var yCoord;
-	
 	
 	document.addEventListener('mousedown', onDocumentMouseDown, false);
 	
@@ -28,14 +31,8 @@ var mouse = { x: 0, y: 0 , clicked: false};
 		}
 	}
 	
-	var shape;
-	function selectShape() {
-		var shape = prompt("Please enter the shape you want to use", "Triangle");
-	}	
-	
 	
     var gl;
-	
     function initGL(canvas) {
         try {
             gl = canvas.getContext("experimental-webgl");
@@ -83,9 +80,8 @@ var mouse = { x: 0, y: 0 , clicked: false};
         return shader;
     }
 
-
+    
     var shaderProgram;
-	
     function initShaders() {
         var fragmentShader = getShader(gl, "shader-fs");		
         var vertexShader = getShader(gl, "shader-vs");
@@ -105,14 +101,12 @@ var mouse = { x: 0, y: 0 , clicked: false};
         gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
 		
         shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
-        shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
-		
+        shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");	
     }
 
-
+    
     var mvMatrix = mat4.create();
     var pMatrix = mat4.create();
-
     function setMatrixUniforms() {
         gl.uniformMatrix4fv(shaderProgram.pMatrixUniform, false, pMatrix);
         gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
@@ -149,7 +143,8 @@ var mouse = { x: 0, y: 0 , clicked: false};
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
         squareVertexPositionBuffer.itemSize = 3;
         squareVertexPositionBuffer.numItems = 4;
-		// straight horizontal line
+		
+        // straight horizontal line
 		linePositionBuffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, linePositionBuffer);
         vertices = [
@@ -195,11 +190,9 @@ var mouse = { x: 0, y: 0 , clicked: false};
 		// vertical lines
 		drawVerticalLine(1.36, 0.0, -10);
 		drawVerticalLine(-1.37, 0.0, -10);
-		
 		// horizontal lines
 		drawHorizontalLine(0.0, 1.37, -10.0);
 		drawHorizontalLine(0.0, -1.36, -10.0);
-		
 	}	
 	
 	function drawTriangle(x, y, z) {
@@ -207,9 +200,6 @@ var mouse = { x: 0, y: 0 , clicked: false};
 		mat4.translate(mvMatrix, [x, y, z]);
         gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexPositionBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, triangleVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-        //new
-		//gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer);
-		//gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, triangleVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
 		setMatrixUniforms();
         gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
 	}
@@ -219,31 +209,27 @@ var mouse = { x: 0, y: 0 , clicked: false};
 		mat4.translate(mvMatrix, [x, y, z]);
         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
-        //new
-		//gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexColorBuffer);
-		//gl.vertexAttribPointer(shaderProgram.vertexColorAttribute, squareVertexColorBuffer.itemSize, gl.FLOAT, false, 0, 0);
 		setMatrixUniforms();
         gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
 		
 	}
 
-	var shape = "triangle";
 	
 	function drawGame(game) {
   	drawScene();
-		for(var i = 0; i < game.length; i++) {
-			for(var j = 0; j < game[i].length; j++) {
-				x = -3.5+j*3.3
-				y = 3.5-i*3.3
-				z = -12
-				if(game[i][j] == 'X') {
-					drawTriangle(x,y,z);
-				}
-				else if(game[i][j] == 'O'){ 
-					drawSquare(x,y,z);
-				}
+	for(var i = 0; i < game.length; i++) {
+		for(var j = 0; j < game[i].length; j++) {
+			x = -3.5+j*3.3
+			y = 3.5-i*3.3
+			z = -12
+			if(game[i][j] == 'X') {
+				drawTriangle(x,y,z);
+			}
+			else if(game[i][j] == 'O'){ 
+				drawSquare(x,y,z);
 			}
 		}
+	}
 	}
 	
     function drawScene() {
@@ -254,10 +240,10 @@ var mouse = { x: 0, y: 0 , clicked: false};
 
         mat4.identity(mvMatrix);
 
+        // initial perspective to draw grid
 		mat4.translate(mvMatrix, [0.0, 0.0, -10.0]);
-
 		drawGrid();
-		mat4.translate(mvMatrix, [-3.4, 3.5, -10.0]);
+		mat4.translate(mvMatrix, [-3.4, 3.5, -10.0]); // positions first shape at the top-left position
 	}
 
     function webGLStart() {
@@ -266,7 +252,7 @@ var mouse = { x: 0, y: 0 , clicked: false};
         initShaders();
         initBuffers();
 
-        gl.clearColor(0.0, 0.0, 0.0, 0.3); // used to be 1.0 at the end for black
+        gl.clearColor(0.0, 0.0, 0.0, 0.3);
         gl.enable(gl.DEPTH_TEST);
 
         drawScene();

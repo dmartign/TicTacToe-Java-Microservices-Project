@@ -1,3 +1,5 @@
+<!-- Note: WebGL basic code and ideas was obtained from tutorials, especially http://learningwebgl.com/blog/?p=28 -->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="tbd.gateway.model.domain.User"%>
@@ -26,58 +28,69 @@
 <script type="text/javascript" src="js/gamelist.js"></script>
 <script type="text/javascript" src="js/game.js"></script>
 <script type="text/javascript" src="js/glMatrix-0.9.5.min.js"></script>
+
+<!--  shaders initialize webGL drawing, rest is done in webgl.js -->
 <script id="shader-fs" type="x-shader/x-fragment">
     precision mediump float;
-// http://learningwebgl.com/blog/?p=134
-	//varying vec4 vColor; 	// new
 	
     void main(void) {
-        gl_FragColor = vec4(0.5, 0.5, 1.0, 1.0); //vColor;
+        gl_FragColor = vec4(0.5, 0.5, 1.0, 1.0);
     }
 </script>
 
 <script id="shader-vs" type="x-shader/x-vertex">
     attribute vec3 aVertexPosition;
-	//attribute vec4 aVertexColor;	// new
 
     uniform mat4 uMVMatrix;
     uniform mat4 uPMatrix;
 	
-	//varying vec4 vColor;	// new
-
     void main(void) {
         gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-		//vColor = aVertexColor; // new
     }
 </script>
-
 </head>
+
 <body onload="webGLStart()">
-	
-	<form method="POST" action="logout">
-		<input type="submit" value="Logout">
-	</form>
+	<div class="col-xs-12" style="height:10px;"></div>
+		<div class="col-xs-12 col-sm-6 col-md-8">
+			<h2 class="text-center text-info">Tic Tac Toe Game</h2>
+		</div>
+		<div class="col-xs-6 col-md-4">
+			<form method="POST" action="logout">
+				<button type="submit" class="btn pull-right">Logout</button>
+			</form>
+		</div>
+	<div class="col-xs-12" style="height:20px;"></div>
+	<hr>
+	<h3>
 	<%
 	    User user = (User) request.getSession().getAttribute("user");
 	    out.write("Welcome, " + user.getName());
 	%>
+	</h3>
 	<br />
+	<div class="col-xs-12" style="height:10px;"></div>
 	<div class="container-fluid">
-	<div class="row-fluid">
-	<input id="challengeinput" type="text"/><input type="button" value="Challenge" onclick="createGame()"/>
-	<table id="gamelist"></table>
-	</div>
-	<div class="row-fluid">
-	<canvas id="tictactoe-canvas" style="border: none;"
-					width="600" height="600"></canvas>
-					</div>
-					<div class="row-fluid">
-	<div class="CHAT" id="chatbox"></div>
-	<br /><input style="width: 75%;" type="text" id="chatInput" onkeydown="checkForEnter()" /><input id="chatEnter" style="width: 20%;" type="button" value="Send" onclick="sendChat()" />
-	</div>
+		<div class="row-fluid">
+		<div class="span9">
+			<input id="challengeinput" type="text"/>
+			<button type="button" class="btn" onclick="createGame()">Challenge</button>
+			<table id="gamelist"></table>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-8" style="height:10px;"></div>
+		<div class="col-xs-12 col-sm-6 col-md-8">
+			<canvas id="tictactoe-canvas" style="border: none;" width="600" height="600"></canvas>
+		</div>
+		<div class="col-xs-6 col-md-4">
+			<div class="CHAT" id="chatbox"></div>
+			<br />
+			<input style="width: 75%;" type="text" id="chatInput" onkeydown="checkForEnter()" />
+			<button type="submit" class="btn" id="chatEnter" onclick="sendChat()">Send</button>
+		</div>
+		<div class="col-xs-12" style="height:50px;"></div>
+		</div>
 	</div>
 	<script type="text/javascript" src="js/webgl.js"></script>
 </body>
 	
-
 </html>
