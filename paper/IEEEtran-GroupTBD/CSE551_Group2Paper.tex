@@ -83,17 +83,17 @@ In this paper we will summarize three current  documents on how ontologies can b
 
 Currently the web is not organized in a manner in which information can be processed easily by a machine; instead it is structured to be utilized by humans who can parse and extract information that is presented in an unorganized manner. Semantic web provides a means of organization that structures information in a simple format that can easily be parsed and utilized by a machine to handle user queries, and create inferences based on formal logic systems.
 
-Section one will cover the data format of the semantic web and why it is structured the way it is in comparison to well-known formats. This will cover the Resource Description Framework (RDF), the Resource Description Framework schema (RDFs), and the Web Ontology Language (OWL) and how they relate to well-known data formats like EXtensible Markup Language (XML), Unified Modeling Language (UML), and Entity/Relation Modeling (E/R Modeling) of databases. This background and conceptual overview will provide a basis for understanding the underlying concepts of the semantic web so that their application can be appreciated.
+Sections 2.1 and 2.2 will cover the data format of the semantic web and why it is structured the way it is in comparison to well-known formats. This will cover the Resource Description Framework (RDF), the Resource Description Framework schema (RDFs), and the Web Ontology Language (OWL) and how they relate to well-known data formats like EXtensible Markup Language (XML), Unified Modeling Language (UML), and Entity/Relation Modeling (E/R Modeling) of databases. This background and conceptual overview will provide a basis for understanding the underlying concepts of the semantic web so that their application can be appreciated.
 
-Section two covers the notions of the issues of independent actors all trying to author and use the semantic web at once with no over-arching governing body. This will go over the problem of multiple resources having the same identifier, called semantic ambiguity. We will also cover the issue of multiple authors all authoring the same resource which means query processor has to find the correct one which is semantic redundancy. Their findings indicate that you can, at better than chance rate, determine the correct resource to use when performing a search using an ambiguous term and relate that term across different ontologies.
+Section 2.3 will cover the notions of the issues of independent actors all trying to author and use the semantic web at once with no over-arching governing body. This will go over the problem of multiple resources having the same identifier, called semantic ambiguity. We will also cover the issue of multiple authors all authoring the same resource which means query processor has to find the correct one which is semantic redundancy. Their findings indicate that you can, at better than chance rate, determine the correct resource to use when performing a search using an ambiguous term and relate that term across different ontologies.
 
-Section three will review a paper that applies some of these concepts in the realm of social media and connecting users across social networks. This paper addresses the issue of social networks not being able to interconnect amongst the web of all social networks. This is due to the ever changing landscape of social media content and the lack of a framework that successfully integrates the different ontologies to relate all the users and content. They presented an overview of existing ontologies, such as Friend-of-a-Friend (FOAF), Semantically Interlinked Online Communities (SIOC), Simple Knowledge Organization System (SKOS), and Dublin Core (DC) and how these ontologies can be used together to build a framework and address the issue of creating a more interconnected web. A brief discussion is included of how this framework will help describe user generated content on social networks and how it relates to users.
+Section 2.4 will review a paper that applies some of these concepts in the realm of social media and connecting users across social networks. This paper addresses the issue of social networks not being able to interconnect amongst the web of all social networks. This is due to the ever changing landscape of social media content and the lack of a framework that successfully integrates the different ontologies to relate all the users and content. They presented an overview of existing ontologies, such as Friend-of-a-Friend (FOAF), Semantically Interlinked Online Communities (SIOC), Simple Knowledge Organization System (SKOS), and Dublin Core (DC) and how these ontologies can be used together to build a framework and address the issue of creating a more interconnected web. A brief discussion is included of how this framework will help describe user generated content on social networks and how it relates to users.
 
-Once the semantic web grows and matures users will be able to be linked and identified across social networks based on the ontologies presented by each social network. This will allow the interconnection of users across social networks and allow for a better understanding of how people communicate and relate using social networks.
+%Once the semantic web grows and matures users will be able to be linked and identified across social networks based on the %ontologies presented by each social network. This will allow the interconnection of users across social networks and allow for a %better understanding of how people communicate and relate using social networks.
 
 
 \section{Reviews of Documents}
-\subsection{Section 1: \textit{Social networks and the semantic web} \cite{_social_2007}}
+\subsection{\textit{Social networks and the semantic web} \cite{_social_2007}}
 The current version of the web contains lots of unstructured data which is easily understood by humans but not easily understood by machines.  People are naturally able to process this data due to our ability to infer new ideas based on ideas we already know, and our ability to make connections between somewhat unrelated topics.  The main goal of the Semantic Web is to have structured data which machines can programmatically  process  to make some of the same connections that human readers naturally make.  So we need formal languages which machines can use to ‘interpret’ data and make connections between resources available throughout the web.
 
 This need for formal languages is not unique to the Semantic Web.  Several areas have strong foundations in formal or semi-formal reasoning.  Some that are familiar to people in the computer science field are artificial intelligence, software modelling, and  database design.
@@ -119,6 +119,7 @@ RDF and OWL have been standardized by the World Wide Web Consortium in recent ye
 \subsubsection{RDF}
 RDF has two kinds of primitives: resources and literals.  Resources are purposely defined vaguely; anything that could be identified and described can be a resource.  Resources can be identified with a URI, or the identifier can be left blank.  Literals are strings, which may or may not have language and datatype identifiers.  Figure 1 shows some RDF vocabulary.
 
+\vspace{3mm}
 \begin{figure}[htbp] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=2in]{RDFVocabPic.jpg} 
@@ -127,18 +128,19 @@ RDF has two kinds of primitives: resources and literals.  Resources are purposel
 \label{}   
 \end{figure}
 
-
+\vspace{3mm}
 RDF statements consist of triples of the form (subject, predicate, object).  The subject is a resource, either with a URI identifier or a blank identifier.  The predicate is a URI, and the object is either a resource or a literal. Figures 2 and 3 show an example very similar to one in \cite{_social_2007} of an RDF document describing a person named Washington: 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=2.5in]{WashJeffPic.jpg} 
-\caption*{Figures 2 and 3: Example similar to one in \cite{_social_2007}.}
+\caption*{Figure 2: Example similar to one in \cite{_social_2007}.}
    \label{}
 \label{}   
 \end{figure}
 
-
+\vspace{3mm}
+\newpage
 \begin{itemize}
 \item[]@prefix rdfs:  \textless http://www.w3.org/2000/01/rdf-schema\#label\textgreater .
 \item[]@prefix rdf:  \textless http://www.w3.org/1999/02/22-rdf-syntax-ns\textgreater .
@@ -152,8 +154,8 @@ RDF statements consist of triples of the form (subject, predicate, object).  The
  \item[] ex:Washington foaf:mbox \textless mailto:GW@pres.org\textgreater .
  \item[] ex:Jefferson foaf:name "Jefferson" .
 \end{itemize}
-
-
+\begin{center}{Figure 3: Example similar to one in \cite{_social_2007}.}\end{center}
+\vspace{3mm}
 This example refers to the Friend-of-a-Friend (FOAF) ontology, which is an RDF document on the Web which defines some of the terms used in the example (see\cite{foaf}).  Figure 4 shows some of the FOAF vocabulary.
 
 
@@ -210,7 +212,7 @@ OWL (Web Ontology Language) adds constructs of Description Logics to RDF, which 
 \label{fig1}
 \end{center}
 \end{figure*}
-
+\subsection{Comparison to Other Formats Commonly Used in Computer Science Domain}
 \subsubsection{Comparison to UML}
 There is quite a bit of overlap between UML and RDF/OWL.  But UML has a smaller scope because its primitives are for a certain kind of information resource: objects and their roles in an OO system.  So RDF/OWL modelling is less constrained than UML modelling and provides primitives not found in UML, such as the disjointness, union, intersection, and equivalence of classes.
 
@@ -229,7 +231,7 @@ Because many organizations are financially entrenched in their relational databa
 \subsubsection{Comparison to XML}
 XML and RDF are similar in many aspects.  XML has directed, ordered trees and RDF has directed graphs.  Both XML and RDF are conceptual models having domain specific languages providing their own vocabularies.  But XML is used for representing hierarchical data, with nested, ordered elements.  RDF has a stricter model to represent arbitrary directed graphs with edges representing relationships between classes or instances of classes.  Since there are so many connections between concepts in domain models, hierarchical representations are not sufficient.  While XML has a natural ordering of elements, RDF allows properties to be listed in unconstrained orders.  
 
-\subsection{Section 2: \textit{Dealing with Semantic Heterogeneity Issues on the Web} \cite{gracia_dealing_2011}}
+\subsection{\textit{Dealing with Semantic Heterogeneity Issues on the Web} \cite{gracia_dealing_2011}}
 
 
 %Daniela's picture 1
@@ -249,6 +251,14 @@ An example of this problem is trying to determine the meaning of the word ''appl
 
 In order to find the correct concept, a search may cross many ontologies where each may have a definition of “apple” and its related concepts. This is where semantic ambiguity and redundancy start to have an effect. In order to filter the search down to likely candidates, word sense disambiguation techniques can be used.
 
+%Daniela's table 1
+\begin{figure*}[hbt]
+\begin{center}
+\includegraphics[width=6in]{DanielaTable1.JPG}       
+\label{fig1}
+\end{center}
+\end{figure*}
+
 There are first techniques to reduce semantic heterogeneity of the result set. There are three techniques proposed by Gracia and Mena (\cite{gracia_dealing_2011}) for accomplishing semantic heterogeneity reduction. In ontology matching, a set of terms are compared to each other based on context and the relations that don't meet a threshold are removed. The output of ontology matching then is fed into sense clustering. 
 
 In sense clustering the relatedness of two concepts that share keywords are used to determine if the two concepts should be integrated into a single concept. When two concepts are merged together, then the ontology matching algorithm needs to be run again to calculate the similarities of the new integrated concept.
@@ -258,16 +268,10 @@ After sense clustering comes sense disambiguation, in which the concept that the
 
 
 
-\subsection{Section 3: \textit{Using Semantic Web Ontologies for better interoperability on social network sites} \cite{6190504}}
+\subsection{\textit{Using Semantic Web Ontologies for better interoperability on social network sites} \cite{6190504}}
 The paper summarized in this section aims at introducing all existing ontologies for semantic web, along with their properties and use in a way to provide a basis for a framework to guarantee inter-operability among multiple social network sites and attain inter-linking of such sites.
 
-%Daniela's table 1
-\begin{figure*}[hbt]
-\begin{center}
-\includegraphics[width=6in]{DanielaTable1.JPG}       
-\label{fig1}
-\end{center}
-\end{figure*}
+
 
 %Daniela's table 2
 \begin{figure*}[hbt]

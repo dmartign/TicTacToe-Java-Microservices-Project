@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.6.13)  30 MAR 2016 18:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.6.13)  12 APR 2016 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -495,100 +495,104 @@ Missing character: There is no ô in font pplr7t!
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 119.
 
-<RDFVocabPic.jpg, id=83, 176.15813pt x 244.66406pt>
+<RDFVocabPic.jpg, id=87, 176.15813pt x 244.66406pt>
 File: RDFVocabPic.jpg Graphic file (type jpg)
  <use RDFVocabPic.jpg>
-Package pdftex.def Info: RDFVocabPic.jpg used on input line 124.
+Package pdftex.def Info: RDFVocabPic.jpg used on input line 125.
 (pdftex.def)             Requested size: 144.54pt x 200.74901pt.
 
-<WashJeffPic.jpg, id=87, 308.65312pt x 163.3603pt>
+<WashJeffPic.jpg, id=91, 308.65312pt x 163.3603pt>
 File: WashJeffPic.jpg Graphic file (type jpg)
  <use WashJeffPic.jpg>
-Package pdftex.def Info: WashJeffPic.jpg used on input line 135.
+Package pdftex.def Info: WashJeffPic.jpg used on input line 136.
 (pdftex.def)             Requested size: 180.67499pt x 95.62894pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 143
+[2 <./RDFVocabPic.jpg>]
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 145
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.53561> on input line 143.
+(Font)              <9.53561> on input line 145.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.6749> on input line 143.
+(Font)              <6.6749> on input line 145.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.7678> on input line 143.
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 143.
+(Font)              <4.7678> on input line 145.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 145.
 
-(c:/texlive/2013/texmf-dist/tex/latex/psnfss/omlppl.fd
+ (c:/texlive/2013/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 143.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 145.
 
-Underfull \hbox (badness 3219) in paragraph at lines 143--144
+Underfull \hbox (badness 3219) in paragraph at lines 145--146
 []\OT1/ppl/m/n/9.53561 @prefix rdfs: \OML/cmm/m/it/10 <\OT1/ppl/m/n/9.53561 htt
 p://www.w3.org/2000/01/rdf-
  []
 
-[2 <./RDFVocabPic.jpg>] <StmtsFromFOAF.jpg, id=97, 327.47343pt x 260.47313pt>
+<StmtsFromFOAF.jpg, id=102, 327.47343pt x 260.47313pt>
 File: StmtsFromFOAF.jpg Graphic file (type jpg)
-
-<use StmtsFromFOAF.jpg>
-Package pdftex.def Info: StmtsFromFOAF.jpg used on input line 162.
+ <use StmtsFromFOAF.jpg>
+Package pdftex.def Info: StmtsFromFOAF.jpg used on input line 164.
 (pdftex.def)             Requested size: 180.67499pt x 143.70978pt.
 
-<RDFSchemaVocabPic.jpg, id=100, 328.97906pt x 234.8775pt>
+<RDFSchemaVocabPic.jpg, id=105, 328.97906pt x 234.8775pt>
 File: RDFSchemaVocabPic.jpg Graphic file (type jpg)
 
 <use RDFSchemaVocabPic.jpg>
-Package pdftex.def Info: RDFSchemaVocabPic.jpg used on input line 174.
+Package pdftex.def Info: RDFSchemaVocabPic.jpg used on input line 176.
 (pdftex.def)             Requested size: 180.67499pt x 128.99666pt.
 
-<subPropertyOfRules.jpg, id=103, 389.20406pt x 105.39375pt>
+<subPropertyOfRules.jpg, id=108, 389.20406pt x 105.39375pt>
 File: subPropertyOfRules.jpg Graphic file (type jpg)
 
 <use subPropertyOfRules.jpg>
-Package pdftex.def Info: subPropertyOfRules.jpg used on input line 188.
+Package pdftex.def Info: subPropertyOfRules.jpg used on input line 190.
 (pdftex.def)             Requested size: 202.35622pt x 54.79861pt.
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
- <Peter1.jpg, id=106, 507.39563pt x 307.90031pt>
+ <Peter1.jpg, id=111, 507.39563pt x 307.90031pt>
 File: Peter1.jpg Graphic file (type jpg)
 
 <use Peter1.jpg>
-Package pdftex.def Info: Peter1.jpg used on input line 208.
+Package pdftex.def Info: Peter1.jpg used on input line 210.
 (pdftex.def)             Requested size: 361.34999pt x 219.28258pt.
 
-Underfull \hbox (badness 2229) in paragraph at lines 215--216
+Underfull \hbox (badness 2229) in paragraph at lines 217--218
 \OT1/ppl/m/n/9.53561 There is quite a bit of over-lap be-tween UML and
  []
 
-Missing character: There is no ‚ in font pplr7t!
-Missing character: There is no Ä in font pplr7t!
-Missing character: There is no ô in font pplr7t!
-Missing character: There is no ‚ in font pplr7t!
-Missing character: There is no Ä in font pplr7t!
-Missing character: There is no ô in font pplr7t!
 [3 <./WashJeffPic.jpg> <./StmtsFromFOAF.jpg> <./RDFSchemaVocabPic.jpg> <./subPr
 opertyOfRules.jpg>]
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+Missing character: There is no ‚ in font pplr7t!
+Missing character: There is no Ä in font pplr7t!
+Missing character: There is no ô in font pplr7t!
+
+Underfull \vbox (badness 1975) has occurred while \output is active []
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 232.
+(hyperref)                removing `\@ifnextchar' on input line 234.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 232.
+(hyperref)                removing `subscript' on input line 234.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 232.
+(hyperref)                removing `subscript' on input line 234.
 
-<Daniela1New.JPG, id=120, 526.96875pt x 393.72093pt>
+<Daniela1New.JPG, id=125, 526.96875pt x 393.72093pt>
 File: Daniela1New.JPG Graphic file (type jpg)
  <use Daniela1New.JPG>
-Package pdftex.def Info: Daniela1New.JPG used on input line 238.
+Package pdftex.def Info: Daniela1New.JPG used on input line 240.
 (pdftex.def)             Requested size: 433.62pt x 323.98871pt.
 
 [4 <./Peter1.jpg>]
@@ -598,39 +602,38 @@ Missing character: There is no ú in font pplr7t!
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
+ <DanielaTable1.JPG, id=136, 500.62032pt x 393.72093pt>
+File: DanielaTable1.JPG Graphic file (type jpg)
 
-Underfull \vbox (badness 1314) has occurred while \output is active []
+<use DanielaTable1.JPG>
+Package pdftex.def Info: DanielaTable1.JPG used on input line 257.
+(pdftex.def)             Requested size: 433.62pt x 341.04454pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 261.
+(hyperref)                removing `\@ifnextchar' on input line 271.
 
-<DanielaTable1.JPG, id=133, 500.62032pt x 393.72093pt>
-File: DanielaTable1.JPG Graphic file (type jpg)
- <use DanielaTable1.JPG>
-Package pdftex.def Info: DanielaTable1.JPG used on input line 267.
-(pdftex.def)             Requested size: 433.62pt x 341.04454pt.
-
-<DanielaTable2.JPG, id=134, 489.32813pt x 237.13594pt>
+[5 <./Daniela1New.JPG>] <DanielaTable2.JPG, id=145, 489.32813pt x 237.13594pt>
 File: DanielaTable2.JPG Graphic file (type jpg)
- <use DanielaTable2.JPG>
-Package pdftex.def Info: DanielaTable2.JPG used on input line 275.
+
+<use DanielaTable2.JPG>
+Package pdftex.def Info: DanielaTable2.JPG used on input line 279.
 (pdftex.def)             Requested size: 433.62pt x 210.14209pt.
-
-<DanielaTable3.JPG, id=135, 559.33969pt x 487.8225pt>
+ <DanielaTable3.JPG, id=146, 559.33969pt x 487.8225pt>
 File: DanielaTable3.JPG Graphic file (type jpg)
- <use DanielaTable3.JPG>
-Package pdftex.def Info: DanielaTable3.JPG used on input line 283.
+
+<use DanielaTable3.JPG>
+Package pdftex.def Info: DanielaTable3.JPG used on input line 287.
 (pdftex.def)             Requested size: 433.62pt x 378.1925pt.
-
-<DanielaTable4.JPG, id=136, 565.36218pt x 353.06906pt>
+ <DanielaTable4.JPG, id=147, 565.36218pt x 353.06906pt>
 File: DanielaTable4.JPG Graphic file (type jpg)
- <use DanielaTable4.JPG>
-Package pdftex.def Info: DanielaTable4.JPG used on input line 292.
-(pdftex.def)             Requested size: 505.89pt x 315.93288pt.
 
-[5 <./Daniela1New.JPG>]
+<use DanielaTable4.JPG>
+Package pdftex.def Info: DanielaTable4.JPG used on input line 296.
+(pdftex.def)             Requested size: 505.89pt x 315.93288pt.
 Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ô in font pplr7t!
@@ -638,22 +641,22 @@ Missing character: There is no ‚ in font pplr7t!
 Missing character: There is no Ä in font pplr7t!
 Missing character: There is no ù in font pplr7t!
  [6 <./DanielaTable1.JPG>]
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 []\OT1/ppl/m/n/9.53561 Semantically-Interlinked On-line Com-mu-ni-ties
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 \OT1/ppl/m/n/9.53561 tech-nol-ogy which has meth-ods that en-able
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 \OT1/ppl/m/n/9.53561 in-ter-con-nec-tion be-tween so-cial net-work sites
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 326--327
+Underfull \hbox (badness 1902) in paragraph at lines 330--331
 \OT1/ppl/m/n/9.53561 ex-tract meta-data use-ful for se-man-tic brows-ing,
  []
 
@@ -687,36 +690,28 @@ Missing character: There is no Ô in font pplr7t!
 Missing character: There is no ø in font pplr7t!
 Missing character: There is no Ω in font pplr7t!
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 388.
- [9
-
- <./DanielaTable4.JPG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 388.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 392.
+ [9 <./DanielaTable4.JPG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 392.
  (./CSE551_Group2Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 388.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 388.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 392.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 392.
+Package rerunfilecheck Info: File `CSE551_Group2Paper.out' has not changed.
+(rerunfilecheck)             Checksum: DD36ED97CE5EE0D63697B113591ECCEF;1325.
 
-
-Package rerunfilecheck Warning: File `CSE551_Group2Paper.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `CSE551_Group2Paper.out':
-(rerunfilecheck)             Before: 8FA437818517B5E84BA2B997004CE4AD;1237
-(rerunfilecheck)             After:  D375328A29A01EA056D13F5260BD95CD;1240.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 388.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 392.
  ) 
 Here is how much of TeX's memory you used:
- 7344 strings out of 493308
- 117100 string characters out of 6141361
- 205325 words of memory out of 5000000
- 10678 multiletter control sequences out of 15000+600000
+ 7346 strings out of 493308
+ 117130 string characters out of 6141361
+ 207314 words of memory out of 5000000
+ 10679 multiletter control sequences out of 15000+600000
  47366 words of font info for 97 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 36i,6n,42p,1397b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,5n,42p,1397b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2013/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2013/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2013/texmf-dist/fonts/type1/
@@ -727,10 +722,10 @@ ic/uhvb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
 onts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/
 palatino/uplr8a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/palatino/uplri8
 a.pfb><c:/texlive/2013/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on CSE551_Group2Paper.pdf (9 pages, 927531 bytes).
+Output written on CSE551_Group2Paper.pdf (9 pages, 928054 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,9 +30,16 @@ public class LoginClient {
             conn.setUseCaches(false);
             DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
             wr.write(postData.getBytes());
+            wr.flush();
+            wr.close();
             InputStream response = conn.getInputStream();
-            while (response.available() > 0) {
-                token = (token == null ? "" : token) + (char) response.read();
+            int len = 0;
+            byte[] buffer = new byte[4096];
+            while (-1 != (len = response.read(buffer))) {
+                token = (token == null ? "" : token) + new String(buffer).trim();
+            }
+            if (token == null || token.isEmpty()) {
+                token = null;
             }
         } catch (MalformedURLException e) {
             // TODO Auto-generated catch block

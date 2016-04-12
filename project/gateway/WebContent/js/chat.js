@@ -8,7 +8,7 @@ function sendChat(){
 }
 
 function addChatMessage(data){
-	document.getElementById("chatBox").innerHTML = document.getElementById("chatBox").innerHTML + data.username + " : " +data.message + "<br/>";
+	document.getElementById("chatbox").innerHTML = document.getElementById("chatbox").innerHTML + data.username + " : " +data.message + "<br/>";
 }
 
 function tryscrollDown(id){
@@ -43,9 +43,9 @@ function checkForEnter(event){
 
 socket.on('new message', function (data) {
     addChatMessage(data);
-    tryscrollDown("chatBox");
+    tryscrollDown("chatbox");
   });
 
 socket.on('user joined',function(data){
-	document.getElementById("chatBox").innerHTML = document.getElementById("chatBox").innerHTML + data.username + " has joined " + data.numUsers +  "<br/>";
+	document.getElementById("chatbox").innerHTML = document.getElementById("chatbox").innerHTML + data.username + " has joined " + data.numUsers +  "<br/>";
 });
