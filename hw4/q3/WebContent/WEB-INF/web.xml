@@ -37,6 +37,14 @@
 		<servlet-name>abstract</servlet-name>
 		<url-pattern>/abstract</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>museums</servlet-name>
+		<servlet-class>hw4q3.web.MuseumsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>museums</servlet-name>
+		<url-pattern>/museums</url-pattern>
+	</servlet-mapping>
 	<!-- Jennifer -->
 	<servlet>
 		<servlet-name>team</servlet-name>
