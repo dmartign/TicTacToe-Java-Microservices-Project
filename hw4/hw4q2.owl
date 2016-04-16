@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://example/documents/"
+     xml:base="http://example/documents/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://example/documents/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example/documents/#Additional_Documentation -->
+
+    <owl:Class rdf:about="http://example/documents/#Additional_Documentation">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Agenda -->
+
+    <owl:Class rdf:about="http://example/documents/#Agenda">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Article -->
+
+    <owl:Class rdf:about="http://example/documents/#Article">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Book -->
+
+    <owl:Class rdf:about="http://example/documents/#Book">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Cost_statement -->
+
+    <owl:Class rdf:about="http://example/documents/#Cost_statement">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Deliverable -->
+
+    <owl:Class rdf:about="http://example/documents/#Deliverable">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Technical_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Documentation -->
+
+    <owl:Class rdf:about="http://example/documents/#Documentation"/>
+    
+
+
+    <!-- http://example/documents/#EC_Templates -->
+
+    <owl:Class rdf:about="http://example/documents/#EC_Templates">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Fax -->
+
+    <owl:Class rdf:about="http://example/documents/#Fax">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Mail -->
+
+    <owl:Class rdf:about="http://example/documents/#Mail">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Management_Documentation -->
+
+    <owl:Class rdf:about="http://example/documents/#Management_Documentation">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Manual -->
+
+    <owl:Class rdf:about="http://example/documents/#Manual">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Technical_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Master_Thesis -->
+
+    <owl:Class rdf:about="http://example/documents/#Master_Thesis">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Thesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Minutes -->
+
+    <owl:Class rdf:about="http://example/documents/#Minutes">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Periodic_Report -->
+
+    <owl:Class rdf:about="http://example/documents/#Periodic_Report">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#PhD_Thesis -->
+
+    <owl:Class rdf:about="http://example/documents/#PhD_Thesis">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Thesis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Project_Proposal -->
+
+    <owl:Class rdf:about="http://example/documents/#Project_Proposal">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Management_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Publication -->
+
+    <owl:Class rdf:about="http://example/documents/#Publication">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Slides -->
+
+    <owl:Class rdf:about="http://example/documents/#Slides">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Technical_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Technical_Documentation -->
+
+    <owl:Class rdf:about="http://example/documents/#Technical_Documentation">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Templates -->
+
+    <owl:Class rdf:about="http://example/documents/#Templates">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Additional_Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example/documents/#Thesis -->
+
+    <owl:Class rdf:about="http://example/documents/#Thesis">
+        <rdfs:subClassOf rdf:resource="http://example/documents/#Documentation"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example/documents/Cost_of_Not_Having_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://example/documents/Cost_of_Not_Having_Semantic_Web">
+        <rdf:type rdf:resource="http://example/documents/#Cost_statement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example/documents/Semantic_Web_Project_Documentation -->
+
+    <owl:NamedIndividual rdf:about="http://example/documents/Semantic_Web_Project_Documentation">
+        <rdf:type rdf:resource="http://example/documents/#Deliverable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example/documents/The_Semantic_Web_And_You -->
+
+    <owl:NamedIndividual rdf:about="http://example/documents/The_Semantic_Web_And_You">
+        <rdf:type rdf:resource="http://example/documents/#Master_Thesis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example/documents/You_And_the_Semantic_Web -->
+
+    <owl:NamedIndividual rdf:about="http://example/documents/You_And_the_Semantic_Web">
+        <rdf:type rdf:resource="http://example/documents/#PhD_Thesis"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
