@@ -6,10 +6,23 @@
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 <script src="js/queries.js" type="text/javascript"></script>
 <script src="js/abstract.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	function loadData(){
+		city = document.getElementById('cityin').value;
+		pullAbstractData(city);
+		pullData('headsofstate',city);
+		pullData('nobelprizelaureates',city);
+	}
+</script>
 </head>
 <body>
+	City: <input id="cityin" type="text"/><input type="button" value="load" onclick="loadData()"/>
 	<div id="abstract"></div>
-	<input onclick='readAbstract()' type='button' value='Play' />
+	<input onclick='readAbstract()' type='button' value='Play' /><input onclick="responsiveVoice.cancel()" type='button' value="Stop" /><br/>
+	Heads of state born in the city:<br/>
 	<div id="headsofstate"></div>
+	Nobel Prize Laureates born in the city:<br/>
+	<div id="nobelprizelaureates"></div>
 </body>
 </html>
