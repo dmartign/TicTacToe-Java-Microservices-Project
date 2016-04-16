@@ -12,6 +12,7 @@
 		<param-name>dbpassword</param-name>
 		<param-value>!PASSWORD!</param-value>
 	</context-param>
+	<!-- Peter -->
 	<servlet>
 		<servlet-name>nobelprizelaureates</servlet-name>
 		<servlet-class>hw4q3.web.NobelPrizeLaureatesServlet</servlet-class>
@@ -36,6 +37,17 @@
 		<servlet-name>abstract</servlet-name>
 		<url-pattern>/abstract</url-pattern>
 	</servlet-mapping>
+	<!-- Jennifer -->
+	
+	<!-- Daniela -->
+	<servlet>
+    		<servlet-name>campus</servlet-name>
+    		<servlet-class>hw4q3.web.CampusServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    		<servlet-name>campus</servlet-name>
+    		<url-pattern>/campus</url-pattern>
+  	</servlet-mapping>
 	<error-page>
 		<location>/error.html</location>
 	</error-page>
