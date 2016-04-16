@@ -12,6 +12,7 @@
 		city = document.getElementById('cityin').value;
 		pullAbstractData(city);
 		pullData('headsofstate',city);
+		pullData('nobelprizelaureates',city);
 	}
 </script>
 </head>
@@ -21,5 +22,7 @@
 	<input onclick='readAbstract()' type='button' value='Play' /><input onclick="responsiveVoice.cancel()" type='button' value="Stop" /><br/>
 	Heads of state born in the city:<br/>
 	<div id="headsofstate"></div>
+	Nobel Prize Laureates born in the city:<br/>
+	<div id="nobelprizelaureates"></div>
 </body>
 </html>
