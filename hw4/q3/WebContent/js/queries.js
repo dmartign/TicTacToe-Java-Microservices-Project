@@ -13,12 +13,13 @@ function formatter(div, data){
 	data.forEach(function(currentValue){
 		newHTML += '<tr>'
 		fields.forEach(function(currentField){
-			newHTML += '<td>'+currentValue[currentField].value+'</td>'
-			
+			if(currentField == 'picture'){
+				newHTML += '<td><img src="'+currentValue[currentField].value+'"/></td>'
+			} else {
+				newHTML += '<td>'+currentValue[currentField].value+'</td>'
+			}
 		})
 		newHTML += '</tr>' 
-		
-		
 	});
 	newHTML += '</table>'
 	div.innerHTML = newHTML;
