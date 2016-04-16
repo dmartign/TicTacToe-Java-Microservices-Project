@@ -67,6 +67,14 @@
     <servlet-name>campus</servlet-name>
     <url-pattern>/campus</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>hometown</servlet-name>
+    <servlet-class>hw4q3.web.HometownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hometown</servlet-name>
+    <url-pattern>/hometown</url-pattern>
+  </servlet-mapping>
   <error-page>
     <location>/error.html</location>
   </error-page>
