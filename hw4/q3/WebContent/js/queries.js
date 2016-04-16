@@ -1,3 +1,5 @@
+
+
 function formatter(div, data){
 	div = document.getElementById(div);
 	fields = data.head.vars;

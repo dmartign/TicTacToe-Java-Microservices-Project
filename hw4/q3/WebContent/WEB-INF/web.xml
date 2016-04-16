@@ -20,6 +20,14 @@
 		<servlet-name>headsOfState</servlet-name>
 		<url-pattern>/headsofstate</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>abstract</servlet-name>
+		<servlet-class>hw4q3.web.AbstractServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>abstract</servlet-name>
+		<url-pattern>/abstract</url-pattern>
+	</servlet-mapping>
 	<error-page>
 		<location>/error.html</location>
 	</error-page>
