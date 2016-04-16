@@ -1,4 +1,5 @@
-var mouse = { x: 0, y: 0 , clicked: false};
+
+	var mouse = { x: 0, y: 0 , clicked: false};
 	var renderWIDTH = 600;
 	var renderHEIGHT = 600;
 	var xCoord;
@@ -266,7 +267,7 @@ var mouse = { x: 0, y: 0 , clicked: false};
         initShaders();
         initBuffers();
 
-        gl.clearColor(0.0, 0.0, 0.0, 0.3); // used to be 1.0 at the end for black
+        gl.clearColor(0.0, 0.0, 0.0, 0.3);
         gl.enable(gl.DEPTH_TEST);
 
         drawScene();
