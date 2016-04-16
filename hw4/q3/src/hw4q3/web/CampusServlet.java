@@ -18,7 +18,7 @@ import org.apache.jena.query.ResultSetFormatter;
  * Servlet implementation class campus
  */
 
-public class campus extends HttpServlet {
+public class CampusServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     @Override
@@ -27,14 +27,17 @@ public class campus extends HttpServlet {
         String sparqle = "http://dbpedia.org/sparql";
         ParameterizedSparqlString pss = new ParameterizedSparqlString();
         pss.setNsPrefix("foaf", "http://xmlns.com/foaf/0.1/");
-        pss.setNsPrefix("", "http://dbpedia.org/resource/");
+        pss.setNsPrefix("dbr", "http://dbpedia.org/resource/");
         pss.setNsPrefix("dbo", "http://dbpedia.org/ontology/");
+        pss.setNsPrefix("dbp", "http://dbpedia.org/property/");
         pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
-        pss.setCommandText("SELECT ?campus"
-                + " WHERE"
-                + " { dbo:"+cityName+" dbo:campus ?campus ."
+        pss.setCommandText("SELECT ?name"
+                + " WHERE {\n"
+                + " ?campus dbp:name ?name ."
+                + " ?campus dbo:campus dbr:"+cityName+" ."
+                + " }"
                 );
         
         QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
