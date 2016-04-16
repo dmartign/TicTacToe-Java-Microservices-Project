@@ -1,0 +1,14 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbr: <https://www.w3.org/1999/02/22-rdf-syntax-ns>
+PREFIX rdf: <http://dbpedia.org/class/yago/>
+PREFIX yago: <http://dbpedia.org/property/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+?campus dbp:name ?name.
+?campus dbo:campus ?city.
+FILTER regex(?city,'Chicago')
+}
+LIMIT 15

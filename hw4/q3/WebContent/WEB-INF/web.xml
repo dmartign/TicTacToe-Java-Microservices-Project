@@ -58,6 +58,14 @@
     <url-pattern>/nickname</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>airports</servlet-name>
+    <servlet-class>hw4q3.web.AirportsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>airports</servlet-name>
+    <url-pattern>/airports</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>campus</servlet-name>
     <servlet-class>hw4q3.web.CampusServlet</servlet-class>
   </servlet>
