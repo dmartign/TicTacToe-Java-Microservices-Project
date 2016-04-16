@@ -1,4 +1,11 @@
-package hw4q3;
+package hw4q3.web;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.query.QueryExecution;
@@ -6,17 +13,13 @@ import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 
-/**
- *
- *
- */
-public class JenaQueryTest {
-    public static void main(String[] args) {
-        String cityName = "Chicago";
-        getPersons(cityName);
-    }
+public class HeadsOfStateServlet extends HttpServlet{
 
-    public static void getPersons(String cityName) {
+    private static final long serialVersionUID = 1L;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String cityName = req.getParameter("city");
         String sparqle = "http://dbpedia.org/sparql";
         ParameterizedSparqlString pss = new ParameterizedSparqlString();
         pss.setNsPrefix("foaf", "http://xmlns.com/foaf/0.1/");
@@ -26,8 +29,8 @@ public class JenaQueryTest {
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
         pss.setCommandText("SELECT"
-                + " ?name ?office ?person"
-                + " WHERE {"
+                + " ?name ?office"
+                + " WHERE {\n"
                 + " ?person dbo:birthPlace ?city.\n"
                 + " FILTER regex(?city,'"+cityName+"')\n"
                 + " ?person foaf:name ?name .\n"
@@ -36,18 +39,18 @@ public class JenaQueryTest {
                 + " }\n"
                 + " ORDER BY ?name"
                 );
-        System.out.println("Query: \n" + pss.asQuery());
         QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
         try {
             ResultSet results = qe.execSelect();
             // A simpler way of printing the results.
-             ResultSetFormatter.out(System.out, results);
-            // In json form printing the results.
-//            ResultSetFormatter.outputAsJSON(System.out, results);
+//             ResultSetFormatter.out(System.out, results);
+//             In json form printing the results.
+            ResultSetFormatter.outputAsJSON(resp.getOutputStream(), results);
         } catch (Exception e) {
             System.out.println(e);
         }
         // / Other 9 nine methods for interesting queries about state/cities of
         // the world will go here
     }
+
 }
