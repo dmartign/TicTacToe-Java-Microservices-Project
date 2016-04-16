@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:foaf="http://xmlns.com/foaf/spec/#"
+	xmlns:rel="http://vocab.org/relationship/#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <foaf:Person rdf:about="http://family/harriet">
+		<rel:childOf><foaf:Person rdf:about="http://family/fan"/></rel:childOf>
+		<rel:childOf><foaf:Person rdf:about="http://family/greg"/></rel:childOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/fan">
+		<rel:parentOf><foaf:Person rdf:about="http://family/harriet"/></rel:parentOf>
+		<rel:childOf><foaf:Person rdf:about="http://family/adam"/></rel:childOf>
+		<rel:childOf><foaf:Person rdf:about="http://family/dotty"/></rel:childOf>
+		<rel:siblingOf><foaf:Person rdf:about="http://family/edward" /></rel:siblingOf>
+		<rel:spouseOf><foaf:Person rdf:about="http://family/greg" /></rel:spouseOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/greg">
+		<rel:parentOf><foaf:Person rdf:about="http://family/harriet"/></rel:parentOf>
+		<rel:spouseOf><foaf:Person rdf:about="http://family/fan" /></rel:spouseOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/edward">
+		<rel:childOf><foaf:Person rdf:about="http://family/adam"/></rel:childOf>
+		<rel:childOf><foaf:Person rdf:about="http://family/dotty"/></rel:childOf>
+		<rel:siblingOf><foaf:Person rdf:about="http://family/fan" /></rel:siblingOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/adam">
+		<rel:parentOf><foaf:Person rdf:about="http://family/edward"/></rel:parentOf>
+		<rel:parentOf><foaf:Person rdf:about="http://family/fan"/></rel:parentOf>
+		<rel:siblingOf><foaf:Person rdf:about="http://family/beth" /></rel:siblingOf>
+		<rel:spouseOf><foaf:Person rdf:about="http://family/dotty" /></rel:spouseOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/dotty">
+		<rel:parentOf><foaf:Person rdf:about="http://family/edward"/></rel:parentOf>
+		<rel:parentOf><foaf:Person rdf:about="http://family/fan"/></rel:parentOf>
+		<rel:spouseOf><foaf:Person rdf:about="http://family/adam" /></rel:spouseOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/beth">
+		<rel:siblingOf><foaf:Person rdf:about="http://family/adam" /></rel:siblingOf>
+		<rel:spouseOf><foaf:Person rdf:about="http://family/chuck" /></rel:spouseOf>
+	</foaf:Person>
+	<foaf:Person rdf:about="http://family/chuck">
+		<rel:spouseOf><foaf:Person rdf:about="http://family/beth" /></rel:spouseOf>
+	</foaf:Person>
+</rdf:RDF>
