@@ -29,8 +29,9 @@ public class TeamServlet extends HttpServlet{
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
         pss.setNsPrefix("dbp", "http://dbpedia.org/property/");
         
-        pss.setCommandText("SELECT ?team "
+        pss.setCommandText("SELECT ?name "
         		+ " WHERE { "
+        		+ " ?team dbp:name ?name."
         		+ " ?team dbp:currentTeamName ?city."
         		+ " FILTER regex(?city,'" + cityName + "')"
         		+ " }"
