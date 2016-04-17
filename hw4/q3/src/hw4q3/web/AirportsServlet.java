@@ -28,17 +28,17 @@ public class AirportsServlet extends HttpServlet{
         pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
         pss.setNsPrefix("dbp", "http://dbpedia.org/property/");
-        
-        pss.setCommandText("SELECT ?name "
+
+        pss.setCommandText("SELECT ?Name "
         		+ " WHERE { "
-        		+ " ?airport dbp:name ?name."
+        		+ " ?airport dbp:name ?Name."
         		+ " ?airport dbp:cityServed dbr:"+cityName+"."
         		+ " }"
                 );
-        
-        
-        
-        
+
+
+
+
         QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
         try {
             ResultSet results = qe.execSelect();
@@ -49,7 +49,7 @@ public class AirportsServlet extends HttpServlet{
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
     }
 
 }

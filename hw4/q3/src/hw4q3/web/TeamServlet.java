@@ -28,10 +28,10 @@ public class TeamServlet extends HttpServlet{
         pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
         pss.setNsPrefix("dbp", "http://dbpedia.org/property/");
-        
-        pss.setCommandText("SELECT ?name "
+
+        pss.setCommandText("SELECT ?Name "
         		+ " WHERE { "
-        		+ " ?team dbp:name ?name."
+        		+ " ?team dbp:name ?Name."
         		+ " ?team dbp:currentTeamName ?city."
         		+ " FILTER regex(?city,'" + cityName + "')"
         		+ " }"
@@ -46,7 +46,7 @@ public class TeamServlet extends HttpServlet{
         } catch (Exception e) {
             System.out.println(e);
         }
-        
+
     }
 
 }

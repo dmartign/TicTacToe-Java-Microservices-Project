@@ -30,12 +30,12 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
     pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
-    pss.setCommandText("SELECT  ?name ?picture"
+    pss.setCommandText("SELECT  ?Name ?Picture"
             +" WHERE"
               +" { ?place a yago:Museum103800563 ."
             +" ?place dbo:location dbr:"+cityName+" ."
-            +" ?place dbp:name ?name ."
-            +" ?place foaf:depiction ?picture ."
+            +" ?place dbp:name ?Name ."
+            +" ?place foaf:depiction ?Picture ."
             +" }");
     QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
     try {

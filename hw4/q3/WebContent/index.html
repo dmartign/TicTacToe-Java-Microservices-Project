@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>TBD Radio</title>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css.css">
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 <script src="js/queries.js" type="text/javascript"></script>
@@ -28,28 +29,40 @@
 </script>
 </head>
 <body>
-	<p><b>City: </b></p><input id="cityin" type="text"/><input type="button" value="load" onclick="loadData()"/>
+	<div class="header">Place: </div><input id="cityin" type="text" value="Chicago"/><input type="button" value="Load" onclick="loadData()"/>
 	<div id="abstract"></div>
-	<input onclick='readAbstract()' type='button' value='Play' /><input onclick="responsiveVoice.cancel()" type='button' value="Stop" /><br/>
-	<p><b>Heads of state born in the city:</b></p><br/>
+	<span class="label">Audio: </span><input onclick='readAbstract()' type='button' value='Play' /><input onclick="responsiveVoice.cancel()" type='button' value="Stop" /><br/>
+	<br/>
+	<a href="#aheadsofstate">Heads of State Born Here</a><br />
+	<a href="#anobelprizelaureates">Nobel Peace Prize Laureates</a><br />
+	<a href="#amuseums">Museums in the area</a><br />
+	<a href="#ateam">Sports Teams</a><br />
+	<a href="#anickname">Nicknames</a><br />
+	<a href="#aairports">Airports</a><br />
+	<a href="#acampus">Campuses - Universities in the area</a><br />
+	<a href="#ahometown">List of some famous people</a><br />
+	<a href="#ahomepage">Homepage</a><br />
+	
+	<a name="aheadsofstate" /><div class="header" >Heads of State Born Here:</div>
 	<div id="headsofstate"></div>
-	<p><b>Nobel Prize Laureates born in the city: </b></p><br/>
+	<a name="anobelprizelaureates" /><div class="header">Nobel Peace Prize Laureates: </div>
 	<div id="nobelprizelaureates"></div>
 	<!-- Peter -->
-	<p><b>Museums in the area: </b></p></br>
+	<a name="amuseums" /><div class="header">Museums in the area: </div>
 	<div id="museums"></div>
 	<!-- Jennifer -->
-	<p><b>Current Teams: </b></p></br> 
+	<a name="ateam" /><div class="header">Sports Teams: </div> 
 	<div id="team"></div>
-	<p><b>Nicknames: </b></p></br>
+	<a name="anickname" /><div class="header">Nicknames: </div>
 	<div id="nickname"></div>
-	<p><b>Airports: </b></p><div id="airports"></div>
+	<a name="aairports" /><div class="header">Airports: </div>
+	<div id="airports"></div>
 	<!-- Daniela -->
-	<p><b>Campuses - Universities in the area:</b></p></br>
+	<a name="acampus" /><div class="header">Campuses - Universities in the area:</div>
 	<div id="campus"></div>
-	<p><b>List of some famous people:</b></p></br>
+	<a name="ahometown" /><div class="header">List of some famous people:</div>
 	<div id="hometown"></div>
-	<p><b>Homepage:</b></p></br>
+	<a name="ahomepage" /><div class="header">Homepage:</div>
 	<div id="homepage"></div>
 </body>
 </html>

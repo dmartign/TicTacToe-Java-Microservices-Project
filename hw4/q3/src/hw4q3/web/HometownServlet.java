@@ -3,7 +3,6 @@ package hw4q3.web;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,14 +32,14 @@ public class HometownServlet extends HttpServlet {
         pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
-        pss.setCommandText("SELECT ?name"
+        pss.setCommandText("SELECT ?Name"
                 + " WHERE {\n"
-                + " ?htown dbp:name ?name ."
+                + " ?htown dbp:name ?Name ."
                 + " ?htown dbo:hometown dbr:"+cityName+" ."
                 + " }"
                 + " LIMIT 15"
                 );
-        
+
         QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
         try {
             ResultSet results = qe.execSelect();

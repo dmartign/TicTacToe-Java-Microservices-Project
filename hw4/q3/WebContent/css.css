@@ -1,4 +1,25 @@
+.header{
+	font-family: lobster;
+	font-size: 2em;
+	font-weight: bolder;
+}
+.label{
+	font-size: 1em;
+	font-weight: bold;
+}
 img {
 	max-height: 6em;
 	max-width: 6em;
+}
+th {
+	border-style: solid;
+	border-color: black;
+}
+tr {
+	border-style: solid;
+	border-color: black;
+}
+td {
+	border-style: solid;
+	border-color: black;
 }

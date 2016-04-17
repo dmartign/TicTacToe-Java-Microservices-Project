@@ -29,15 +29,15 @@ public class HeadsOfStateServlet extends HttpServlet{
         pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
         pss.setCommandText("SELECT"
-                + " ?name ?office"
+                + " ?Name ?Office"
                 + " WHERE {\n"
                 + " ?person dbo:birthPlace ?city.\n"
                 + " FILTER regex(?city,'"+cityName+"')\n"
-                + " ?person foaf:name ?name .\n"
+                + " ?person foaf:name ?Name .\n"
                 + " ?person a yago:HeadOfState110164747 .\n"
-                + " ?person dbo:office ?office .\n"
+                + " ?person dbo:office ?Office .\n"
                 + " }\n"
-                + " ORDER BY ?name"
+                + " ORDER BY ?Name"
                 );
         QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
         try {

@@ -28,11 +28,11 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     pss.setNsPrefix("rdf", "https://www.w3.org/1999/02/22-rdf-syntax-ns");
     pss.setNsPrefix("yago", "http://dbpedia.org/class/yago/");
 
-    pss.setCommandText("SELECT  ?name"
+    pss.setCommandText("SELECT  ?Name"
             +" WHERE"
             +"   { ?person a yago:NobelPeacePrizeLaureates ."
             +" ?person dbo:birthPlace dbr:"+cityName+"."
-            +" ?person dbp:name ?name ."
+            +" ?person dbp:name ?Name ."
             +" }");
     QueryExecution qe = QueryExecutionFactory.sparqlService(sparqle, pss.asQuery());
     try {
