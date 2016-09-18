@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Configuration>
+  <Properties>
+    <Property name="pattern">%d %level{length=5} [%t] %C{2} (%F:%L) - %m%n</Property>
+  </Properties> 
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT"> 
+      <PatternLayout pattern="${pattern}"/> 
+    </Console> 
+  </Appenders> 
+  <Loggers> 
+    <Root level="ALL"> 
+      <AppenderRef ref="STDOUT"/>
+    </Root> 
+  </Loggers> 
+</Configuration>
